@@ -1,0 +1,31 @@
+# Project: ZHSY4
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+OBJ      = main.o ball.o
+LINKOBJ  = main.o ball.o
+LIBS     = -L"D:/MineP/Dev C++/Dev-Cpp/MinGW64/lib" -L"D:/MineP/Dev C++/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc
+INCS     = -I"D:/MineP/Dev C++/Dev-Cpp/MinGW64/include" -I"D:/MineP/Dev C++/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"D:/MineP/Dev C++/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"D:/MineP/Dev C++/Dev-Cpp/MinGW64/include" -I"D:/MineP/Dev C++/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"D:/MineP/Dev C++/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"D:/MineP/Dev C++/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+BIN      = zhsy4.exe
+CXXFLAGS = $(CXXINCS) 
+CFLAGS   = $(INCS) 
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CC) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+main.o: main.c
+	$(CC) -c main.c -o main.o $(CFLAGS)
+
+ball.o: ball.c
+	$(CC) -c ball.c -o ball.o $(CFLAGS)

@@ -1,0 +1,111 @@
+<mxfile host="Electron" modified="2023-12-05T10:19:40.520Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/22.0.3 Chrome/114.0.5735.289 Electron/25.8.4 Safari/537.36" etag="dDQBtgd5nRURm54SUSQi" version="22.0.3" type="device">
+  <diagram name="第 1 页 的副本" id="JgZBIZOeviGuvXr1Tgrx">
+    <mxGraphModel dx="1206" dy="702" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="4681" pageHeight="3300" background="#ffffff" math="0" shadow="0">
+      <root>
+        <mxCell id="HTb4UV4sWMuf5ls2SjIO-0" />
+        <mxCell id="HTb4UV4sWMuf5ls2SjIO-1" parent="HTb4UV4sWMuf5ls2SjIO-0" />
+        <mxCell id="HTb4UV4sWMuf5ls2SjIO-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;labelBackgroundColor=none;startSize=5;endArrow=classicThin;endFill=1;endSize=5;jettySize=auto;orthogonalLoop=1;strokeWidth=1;fontFamily=Verdana;fontSize=8;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="HTb4UV4sWMuf5ls2SjIO-1" source="HTb4UV4sWMuf5ls2SjIO-5" target="HTb4UV4sWMuf5ls2SjIO-6" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="299.6566259765625" y="409.99668701171873" as="sourcePoint" />
+            <mxPoint x="259.6566259765625" y="389.99668701171873" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="HTb4UV4sWMuf5ls2SjIO-3" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;答案正确&lt;/span&gt;" style="rhombus;whiteSpace=wrap;html=1;rounded=0;shadow=1;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=8;align=center;" parent="HTb4UV4sWMuf5ls2SjIO-1" vertex="1">
+          <mxGeometry x="189.6566259765625" y="619.9966870117188" width="130" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="HTb4UV4sWMuf5ls2SjIO-4" value="&lt;font style=&quot;font-size: 17px;&quot;&gt;函数结束&lt;/font&gt;" style="strokeWidth=1;html=1;shape=mxgraph.flowchart.terminator;whiteSpace=wrap;rounded=0;shadow=1;labelBackgroundColor=none;fontFamily=Verdana;fontSize=8;align=center;" parent="HTb4UV4sWMuf5ls2SjIO-1" vertex="1">
+          <mxGeometry x="314.66662597656267" y="1119.9966870117187" width="90" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="HTb4UV4sWMuf5ls2SjIO-5" value="开始" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;glass=0;strokeWidth=1;shadow=0;" parent="HTb4UV4sWMuf5ls2SjIO-1" vertex="1">
+          <mxGeometry x="199.6566259765625" y="279.99668701171873" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="HTb4UV4sWMuf5ls2SjIO-6" value="&lt;font face=&quot;Verdana&quot;&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;获得随机产生的num1和num2&lt;/span&gt;&lt;/font&gt;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;hachureGap=4;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;fontSize=20;" parent="HTb4UV4sWMuf5ls2SjIO-1" vertex="1">
+          <mxGeometry x="194.6566259765625" y="349.99668701171873" width="130" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="HTb4UV4sWMuf5ls2SjIO-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;labelBackgroundColor=none;startSize=5;endArrow=classicThin;endFill=1;endSize=5;jettySize=auto;orthogonalLoop=1;strokeWidth=1;fontFamily=Verdana;fontSize=8;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="HTb4UV4sWMuf5ls2SjIO-1" source="HTb4UV4sWMuf5ls2SjIO-6" target="HTb4UV4sWMuf5ls2SjIO-12" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="309.99" y="480.33" as="sourcePoint" />
+            <mxPoint x="259.6466259765625" y="450.32668701171866" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="HTb4UV4sWMuf5ls2SjIO-8" value="Yes" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;labelBackgroundColor=none;startSize=5;endArrow=classicThin;endFill=1;endSize=5;jettySize=auto;orthogonalLoop=1;strokeWidth=1;fontFamily=Verdana;fontSize=8;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="HTb4UV4sWMuf5ls2SjIO-1" source="HTb4UV4sWMuf5ls2SjIO-3" target="HTb4UV4sWMuf5ls2SjIO-18" edge="1">
+          <mxGeometry x="-0.6667" y="10" relative="1" as="geometry">
+            <mxPoint as="offset" />
+            <mxPoint x="360" y="730" as="sourcePoint" />
+            <mxPoint x="259.6666259765625" y="929.9966870117187" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="HTb4UV4sWMuf5ls2SjIO-9" value="No" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;labelBackgroundColor=none;startSize=5;endArrow=classicThin;endFill=1;endSize=5;jettySize=auto;orthogonalLoop=1;strokeWidth=1;fontFamily=Verdana;fontSize=8;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="HTb4UV4sWMuf5ls2SjIO-1" source="HTb4UV4sWMuf5ls2SjIO-3" target="HTb4UV4sWMuf5ls2SjIO-19" edge="1">
+          <mxGeometry x="-0.6667" y="10" relative="1" as="geometry">
+            <mxPoint as="offset" />
+            <mxPoint x="500" y="800" as="sourcePoint" />
+            <mxPoint x="260" y="1120" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="HTb4UV4sWMuf5ls2SjIO-10" value="&lt;span style=&quot;font-size: 18px;&quot;&gt;返回函数值1&lt;/span&gt;" style="whiteSpace=wrap;html=1;rounded=0;shadow=1;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=8;align=center;" parent="HTb4UV4sWMuf5ls2SjIO-1" vertex="1">
+          <mxGeometry x="179.66" y="920" width="150" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="HTb4UV4sWMuf5ls2SjIO-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;labelBackgroundColor=none;startSize=5;endArrow=classicThin;endFill=1;endSize=5;jettySize=auto;orthogonalLoop=1;strokeWidth=1;fontFamily=Verdana;fontSize=8;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="HTb4UV4sWMuf5ls2SjIO-1" source="HTb4UV4sWMuf5ls2SjIO-18" target="HTb4UV4sWMuf5ls2SjIO-10" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="235.0066259765625" y="1099.9966870117187" as="sourcePoint" />
+            <mxPoint x="245.34" y="1140" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="HTb4UV4sWMuf5ls2SjIO-12" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;将num1和num2中较大的分配给numM1，较小的分配给numM2&lt;/font&gt;" style="whiteSpace=wrap;html=1;rounded=0;shadow=1;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=8;align=center;" parent="HTb4UV4sWMuf5ls2SjIO-1" vertex="1">
+          <mxGeometry x="414.66662597656244" y="354.9966870117187" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="HTb4UV4sWMuf5ls2SjIO-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;labelBackgroundColor=none;startSize=5;endArrow=classicThin;endFill=1;endSize=5;jettySize=auto;orthogonalLoop=1;strokeWidth=1;fontFamily=Verdana;fontSize=8;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="HTb4UV4sWMuf5ls2SjIO-1" source="HTb4UV4sWMuf5ls2SjIO-12" target="HTb4UV4sWMuf5ls2SjIO-14" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="270" y="430" as="sourcePoint" />
+            <mxPoint x="260" y="570" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="HTb4UV4sWMuf5ls2SjIO-14" value="&lt;font style=&quot;font-size: 10px;&quot; face=&quot;Verdana&quot;&gt;输出算式“numM1-numM2=”&lt;/font&gt;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;hachureGap=4;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;fontSize=20;" parent="HTb4UV4sWMuf5ls2SjIO-1" vertex="1">
+          <mxGeometry x="409.6666259765625" y="489.9966870117187" width="130" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="HTb4UV4sWMuf5ls2SjIO-15" value="&lt;font style=&quot;font-size: 11px;&quot; face=&quot;Verdana&quot;&gt;获得用户输入的答案&lt;/font&gt;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;hachureGap=4;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;fontSize=20;" parent="HTb4UV4sWMuf5ls2SjIO-1" vertex="1">
+          <mxGeometry x="189.65662597656242" y="489.9966870117187" width="130" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="HTb4UV4sWMuf5ls2SjIO-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;labelBackgroundColor=none;startSize=5;endArrow=classicThin;endFill=1;endSize=5;jettySize=auto;orthogonalLoop=1;strokeWidth=1;fontFamily=Verdana;fontSize=8;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="HTb4UV4sWMuf5ls2SjIO-1" source="HTb4UV4sWMuf5ls2SjIO-15" target="HTb4UV4sWMuf5ls2SjIO-3" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="667.4499999999999" y="410.3299999999999" as="sourcePoint" />
+            <mxPoint x="467" y="660" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="HTb4UV4sWMuf5ls2SjIO-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;labelBackgroundColor=none;startSize=5;endArrow=classicThin;endFill=1;endSize=5;jettySize=auto;orthogonalLoop=1;strokeWidth=1;fontFamily=Verdana;fontSize=8;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="HTb4UV4sWMuf5ls2SjIO-1" source="HTb4UV4sWMuf5ls2SjIO-14" target="HTb4UV4sWMuf5ls2SjIO-15" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="477" y="500" as="sourcePoint" />
+            <mxPoint x="260" y="680" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="HTb4UV4sWMuf5ls2SjIO-18" value="&lt;font style=&quot;font-size: 12px;&quot; face=&quot;Verdana&quot;&gt;&lt;span style=&quot;&quot;&gt;输出&lt;br&gt;“答对了，你真棒”&lt;/span&gt;&lt;/font&gt;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;hachureGap=4;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;fontSize=20;" parent="HTb4UV4sWMuf5ls2SjIO-1" vertex="1">
+          <mxGeometry x="189.65662597656242" y="779.9966870117187" width="130" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="HTb4UV4sWMuf5ls2SjIO-19" value="&lt;font style=&quot;font-size: 13px;&quot; face=&quot;Verdana&quot;&gt;输出&lt;br&gt;&lt;span style=&quot;&quot;&gt;“对不起，&lt;br&gt;你答错了哦”&lt;/span&gt;&lt;/font&gt;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;hachureGap=4;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;fontSize=20;" parent="HTb4UV4sWMuf5ls2SjIO-1" vertex="1">
+          <mxGeometry x="404.66662597656244" y="779.9966870117187" width="130" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="HTb4UV4sWMuf5ls2SjIO-20" value="&lt;span style=&quot;font-size: 18px;&quot;&gt;返回函数值0&lt;/span&gt;" style="whiteSpace=wrap;html=1;rounded=0;shadow=1;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=8;align=center;" parent="HTb4UV4sWMuf5ls2SjIO-1" vertex="1">
+          <mxGeometry x="394.67" y="920" width="150" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="HTb4UV4sWMuf5ls2SjIO-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;labelBackgroundColor=none;startSize=5;endArrow=classicThin;endFill=1;endSize=5;jettySize=auto;orthogonalLoop=1;strokeWidth=1;fontFamily=Verdana;fontSize=8;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="HTb4UV4sWMuf5ls2SjIO-1" source="HTb4UV4sWMuf5ls2SjIO-19" target="HTb4UV4sWMuf5ls2SjIO-20" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="270" y="1030" as="sourcePoint" />
+            <mxPoint x="270" y="1090" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="HTb4UV4sWMuf5ls2SjIO-22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;labelBackgroundColor=none;startSize=5;endArrow=classicThin;endFill=1;endSize=5;jettySize=auto;orthogonalLoop=1;strokeWidth=1;fontFamily=Verdana;fontSize=8;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryPerimeter=0;" parent="HTb4UV4sWMuf5ls2SjIO-1" source="HTb4UV4sWMuf5ls2SjIO-20" target="HTb4UV4sWMuf5ls2SjIO-4" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="505" y="1030" as="sourcePoint" />
+            <mxPoint x="505" y="1090" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="HTb4UV4sWMuf5ls2SjIO-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;labelBackgroundColor=none;startSize=5;endArrow=classicThin;endFill=1;endSize=5;jettySize=auto;orthogonalLoop=1;strokeWidth=1;fontFamily=Verdana;fontSize=8;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryPerimeter=0;" parent="HTb4UV4sWMuf5ls2SjIO-1" source="HTb4UV4sWMuf5ls2SjIO-10" target="HTb4UV4sWMuf5ls2SjIO-4" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="505" y="1160" as="sourcePoint" />
+            <mxPoint x="385" y="1330" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
