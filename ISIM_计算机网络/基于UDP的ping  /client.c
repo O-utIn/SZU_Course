@@ -25,41 +25,41 @@ int main(int argc, char *argv[])
     double avg_rtt = 0.0;
     char input[MAX_PACKET_SIZE];
 
-    // ³õÊ¼»¯ Winsock
+    // åˆå§‹åŒ– Winsock
     if (WSAStartup(MAKEWORD(2,2), &wsaData) != 0)
 	{
-        perror("WSAÆô¶¯Ê§°Ü");
+        perror("WSAå¯åŠ¨å¤±è´¥");
         exit(EXIT_FAILURE);
     }
 
-    // ´´½¨Ò»¸ö UDP Ì×½Ó×Ö
+    // åˆ›å»ºä¸€ä¸ª UDP å¥—æ¥å­—
     if ((sockfd = socket(AF_INET, SOCK_DGRAM, 0)) < 0)
 	{
-        perror("´´½¨Ì×½Ó×ÖÊ§°Ü");
+        perror("åˆ›å»ºå¥—æ¥å­—å¤±è´¥");
         WSACleanup();
         exit(EXIT_FAILURE);
     }
 
-    // ÉèÖÃ·şÎñÆ÷µØÖ·
+    // è®¾ç½®æœåŠ¡å™¨åœ°å€
     memset(&server_addr, 0, sizeof(server_addr));
     server_addr.sin_family = AF_INET;
     server_addr.sin_port = htons(SERVER_PORT);
     server_addr.sin_addr.s_addr = inet_addr("127.0.0.1");
 
-    // ³ÖĞø»ñÈ¡ÓÃ»§ÊäÈë²¢·¢ËÍµ½·şÎñÆ÷
+    // æŒç»­è·å–ç”¨æˆ·è¾“å…¥å¹¶å‘é€åˆ°æœåŠ¡å™¨
     while (1)
 	{
-        // »ñÈ¡ÓÃ»§ÊäÈë
-        printf("ÊäÈëÒª·¢ËÍµ½·şÎñÆ÷µÄ±¨ÎÄ£¨»òÊäÈë \"ping\" ½øĞĞ ping ²Ù×÷£¬½øĞĞping²Ù×÷ºó·şÎñÆ÷½«»á¹Ø±Õ£©£º");
+        // è·å–ç”¨æˆ·è¾“å…¥
+        printf("è¾“å…¥è¦å‘é€åˆ°æœåŠ¡å™¨çš„æŠ¥æ–‡ï¼ˆæˆ–è¾“å…¥ \"ping\" è¿›è¡Œ ping æ“ä½œï¼Œè¿›è¡Œpingæ“ä½œåæœåŠ¡å™¨å°†ä¼šå…³é—­ï¼‰ï¼š");
         gets(input);
 
-        // Èç¹ûÓÃ»§ÊäÈë "ping"£¬ÔòÖ´ĞĞ ping ²Ù×÷
+        // å¦‚æœç”¨æˆ·è¾“å…¥ "ping"ï¼Œåˆ™æ‰§è¡Œ ping æ“ä½œ
         if (strcmp(input, "ping") == 0) {
-            // ·¢ËÍÊı¾İ±¨
+            // å‘é€æ•°æ®æŠ¥
             strcpy(buf, "ping");
             if (sendto(sockfd, buf, strlen(buf), 0, (struct sockaddr *) &server_addr, server_len) < 0)
 			{
-                perror("·¢ËÍÊı¾İ±¨Ê§°Ü");
+                perror("å‘é€æ•°æ®æŠ¥å¤±è´¥");
                 closesocket(sockfd);
                 WSACleanup();
                 exit(EXIT_FAILURE);
@@ -67,26 +67,26 @@ int main(int argc, char *argv[])
 
             num_packets_sent++;
 
-            // »ñÈ¡·¢ËÍÊ±¼ä
+            // è·å–å‘é€æ—¶é—´
             gettimeofday(&start, NULL);
 
-            // ½ÓÊÕÊı¾İ±¨
+            // æ¥æ”¶æ•°æ®æŠ¥
             while (num_packets_received < 4) {
                 if (recvfrom(sockfd, buf, sizeof(buf), 0, (struct sockaddr *) &server_addr, &server_len) < 0)
 				{
-                    perror("½ÓÊÕÊı¾İ±¨Ê§°Ü");
+                    perror("æ¥æ”¶æ•°æ®æŠ¥å¤±è´¥");
                     closesocket(sockfd);
                     WSACleanup();
                     exit(EXIT_FAILURE);
                 }
 
-                // »ñÈ¡½ÓÊÕÊ±¼ä
+                // è·å–æ¥æ”¶æ—¶é—´
                 gettimeofday(&end, NULL);
 
-                // ¼ÆËã RTT
+                // è®¡ç®— RTT
                 rtt = (end.tv_sec - start.tv_sec) * 1000.0 + (end.tv_usec- start.tv_usec) / 1000.0;
 
-                // ¸üĞÂÍ³¼ÆĞÅÏ¢
+                // æ›´æ–°ç»Ÿè®¡ä¿¡æ¯
                 num_packets_received++;
                 if (rtt < min_rtt)
 				{
@@ -98,13 +98,13 @@ int main(int argc, char *argv[])
                 }
                 avg_rtt += rtt;
 
-                // ´òÓ¡Êı¾İ±¨ºÍ RTT
-                printf("À´×Ô %s µÄ»Ø¸´: ×Ö½Ú=%d Ê±¼ä=%.1fms \n", inet_ntoa(server_addr.sin_addr), strlen(buf), rtt);
+                // æ‰“å°æ•°æ®æŠ¥å’Œ RTT
+                printf("æ¥è‡ª %s çš„å›å¤: å­—èŠ‚=%d æ—¶é—´=%.1fms \n", inet_ntoa(server_addr.sin_addr), strlen(buf), rtt);
 
-                // ÖØĞÂ·¢ËÍÊı¾İ±¨
+                // é‡æ–°å‘é€æ•°æ®æŠ¥
                 if (sendto(sockfd, buf, strlen(buf), 0, (struct sockaddr *) &server_addr, server_len) < 0)
 				{
-                    perror("·¢ËÍÊı¾İ±¨Ê§°Ü");
+                    perror("å‘é€æ•°æ®æŠ¥å¤±è´¥");
                     closesocket(sockfd);
                     WSACleanup();
                     exit(EXIT_FAILURE);
@@ -112,46 +112,46 @@ int main(int argc, char *argv[])
 
                 num_packets_sent++;
 
-                // »ñÈ¡·¢ËÍÊ±¼ä
+                // è·å–å‘é€æ—¶é—´
                 gettimeofday(&start, NULL);
             }
 
-            // ¹Ø±ÕÌ×½Ó×Ö
+            // å…³é—­å¥—æ¥å­—
             closesocket(sockfd);
     
-            // ÇåÀí Winsock
+            // æ¸…ç† Winsock
             WSACleanup();
 
-            // ´òÓ¡ ping Í³¼ÆĞÅÏ¢
-            printf("\n%s µÄ Ping Í³¼ÆĞÅÏ¢:\n",inet_ntoa(server_addr.sin_addr));
-            printf("    Êı¾İ°ü: ÒÑ·¢ËÍ = %d£¬ÒÑ½ÓÊÕ = %d£¬¶ªÊ§ = %d (%.1f%% ¶ªÊ§)\n", num_packets_sent, num_packets_received, num_packets_sent - num_packets_received, (double)(num_packets_sent - num_packets_received) / num_packets_sent * 100.0);
-            printf("Íù·µĞĞ³ÌµÄ¹À¼ÆÊ±¼ä(ÒÔºÁÃëÎªµ¥Î»):\n");
-            printf("    ×î¶Ì = %.1fms£¬×î³¤ = %.1fms£¬Æ½¾ù = %.1fms\n\n", min_rtt, max_rtt, avg_rtt / num_packets_received);
+            // æ‰“å° ping ç»Ÿè®¡ä¿¡æ¯
+            printf("\n%s çš„ Ping ç»Ÿè®¡ä¿¡æ¯:\n",inet_ntoa(server_addr.sin_addr));
+            printf("    æ•°æ®åŒ…: å·²å‘é€ = %dï¼Œå·²æ¥æ”¶ = %dï¼Œä¸¢å¤± = %d (%.1f%% ä¸¢å¤±)\n", num_packets_sent, num_packets_received, num_packets_sent - num_packets_received, (double)(num_packets_sent - num_packets_received) / num_packets_sent * 100.0);
+            printf("å¾€è¿”è¡Œç¨‹çš„ä¼°è®¡æ—¶é—´(ä»¥æ¯«ç§’ä¸ºå•ä½):\n");
+            printf("    æœ€çŸ­ = %.1fmsï¼Œæœ€é•¿ = %.1fmsï¼Œå¹³å‡ = %.1fms\n\n", min_rtt, max_rtt, avg_rtt / num_packets_received);
         }
         
-        // ÓÃ»§Õı³£ÊäÈë
+        // ç”¨æˆ·æ­£å¸¸è¾“å…¥
         else
 		{
-            // Ïò·şÎñÆ÷·¢ËÍ±¨ÎÄ
+            // å‘æœåŠ¡å™¨å‘é€æŠ¥æ–‡
             if (sendto(sockfd, input, strlen(input), 0, (struct sockaddr *) &server_addr, server_len) < 0)
 			{
-                perror("·¢ËÍÊı¾İ±¨Ê§°Ü");
+                perror("å‘é€æ•°æ®æŠ¥å¤±è´¥");
                 closesocket(sockfd);
                 WSACleanup();
 				exit(EXIT_FAILURE);
             }
 
-            // ½ÓÊÕ·şÎñÆ÷ÏìÓ¦
+            // æ¥æ”¶æœåŠ¡å™¨å“åº”
             if (recvfrom(sockfd, buf, sizeof(buf), 0, (struct sockaddr *) &server_addr, &server_len) < 0)
 			{
-                perror("½ÓÊÕÊı¾İ±¨Ê§°Ü");
+                perror("æ¥æ”¶æ•°æ®æŠ¥å¤±è´¥");
                 closesocket(sockfd);
                 WSACleanup();
                 exit(EXIT_FAILURE);
             }
 
 
-            printf("À´×Ô·şÎñÆ÷µÄÏìÓ¦£º%s\n", buf);
+            printf("æ¥è‡ªæœåŠ¡å™¨çš„å“åº”ï¼š%s\n", buf);
         }
     }
 
