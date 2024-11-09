@@ -14,65 +14,65 @@ int main()
     socklen_t server_len = sizeof(server_addr);
     char buf[256];
 
-    // ³õÊ¼»¯ Winsock
+    // åˆå§‹åŒ– Winsock
     if (WSAStartup(MAKEWORD(2,2), &wsaData) != 0)
 	{
-        perror("WSAÆô¶¯Ê§°Ü");
+        perror("WSAå¯åŠ¨å¤±è´¥");
         exit(EXIT_FAILURE);
     }
 
-    // ´´½¨Ò»¸ö UDP Ì×½Ó×Ö
+    // åˆ›å»ºä¸€ä¸ª UDP å¥—æ¥å­—
     if ((sockfd = socket(AF_INET, SOCK_DGRAM, 0)) < 0)
 	{
-        perror("´´½¨Ì×½Ó×ÖÊ§°Ü");
+        perror("åˆ›å»ºå¥—æ¥å­—å¤±è´¥");
         WSACleanup();
         exit(EXIT_FAILURE);
     }
 
-    // ÉèÖÃ·şÎñÆ÷µØÖ·
+    // è®¾ç½®æœåŠ¡å™¨åœ°å€
     memset(&server_addr, 0, sizeof(server_addr));
     server_addr.sin_family = AF_INET;
     server_addr.sin_port = htons(SERVER_PORT);
     server_addr.sin_addr.s_addr = htonl(INADDR_ANY);
 
-    // °ó¶¨Ì×½Ó×Öµ½·şÎñÆ÷µØÖ·
+    // ç»‘å®šå¥—æ¥å­—åˆ°æœåŠ¡å™¨åœ°å€
     if (bind(sockfd, (struct sockaddr *) &server_addr, sizeof(server_addr)) < 0)
 	{
-        perror("°ó¶¨Ì×½Ó×ÖÊ§°Ü");
+        perror("ç»‘å®šå¥—æ¥å­—å¤±è´¥");
         closesocket(sockfd);
         WSACleanup();
         exit(EXIT_FAILURE);
     }
     
-    printf("·şÎñÆ÷ÒÑÆô¶¯\n");
+    printf("æœåŠ¡å™¨å·²å¯åŠ¨\n");
     
 
-    // ½ÓÊÕÀ´×Ô¿Í»§¶ËµÄÊı¾İ±¨
+    // æ¥æ”¶æ¥è‡ªå®¢æˆ·ç«¯çš„æ•°æ®æŠ¥
     while (1)
 	{
         memset(buf, 0, sizeof(buf));
         if (recvfrom(sockfd, buf, sizeof(buf), 0, (struct sockaddr *) &server_addr, &server_len) < 0)
 		{
-            perror("½ÓÊÕÊı¾İ±¨Ê§°Ü");
+            perror("æ¥æ”¶æ•°æ®æŠ¥å¤±è´¥");
             closesocket(sockfd);
             WSACleanup();
             exit(EXIT_FAILURE);
         }
 
-        // ´òÓ¡¿Í»§¶Ë±¨ÎÄ
-        printf("À´×Ô¿Í»§¶ËµÄ±¨ÎÄ£º%s\n", buf);
+        // æ‰“å°å®¢æˆ·ç«¯æŠ¥æ–‡
+        printf("æ¥è‡ªå®¢æˆ·ç«¯çš„æŠ¥æ–‡ï¼š%s\n", buf);
 
-        // ·¢ËÍÏìÓ¦
+        // å‘é€å“åº”
         if (sendto(sockfd, buf, strlen(buf), 0, (struct sockaddr *) &server_addr, server_len) < 0)
 		{
-            perror("·¢ËÍÊı¾İ±¨Ê§°Ü");
+            perror("å‘é€æ•°æ®æŠ¥å¤±è´¥");
         }
     }
 
-    // ¹Ø±ÕÌ×½Ó×Ö
+    // å…³é—­å¥—æ¥å­—
     closesocket(sockfd);
     
-    // ÇåÀí Winsock
+    // æ¸…ç† Winsock
     WSACleanup();
 
     return 0;
