@@ -215,6 +215,8 @@ base=NULL表示栈不存在\
 ![image](https://github.com/user-attachments/assets/8d9475fd-32ad-4661-a591-57792d35c6ec)
 ![image](https://github.com/user-attachments/assets/d0b24282-436b-4a9a-ad59-d6068bb4fe28)
 
+![image](https://github.com/user-attachments/assets/18100fa4-45cc-4553-9f9d-db4c6c757bb0)
 
 
+# 4.串
 
