@@ -196,12 +196,24 @@ base=NULL表示栈不存在\
 共享栈，两个栈共用一个数组空间，两个栈顶相邻则栈满\
 ![image](https://github.com/user-attachments/assets/6df0ef3a-f9d8-42d8-9250-0d43594a8cdd)
 
+## 队列
+**队列特点**：先进先出（FIFO）\
+队列的入队序列和出队序列完全相同的，即出队结果是唯一的\
+队列同样是操作受限的的线性表\
+在队列中，允许插入的一端叫队尾（rear），允许删除的一端称为队头（front）\
+队列的存储结构：顺序队列、循环队列、链队列\
+
+![image](https://github.com/user-attachments/assets/23cc74ff-4251-475b-ab2d-8ca07d6e364b)
+![image](https://github.com/user-attachments/assets/f6a60341-8a92-46e8-afe6-1957a21c85d6)
 
 
+![image](https://github.com/user-attachments/assets/e929dab8-6057-4135-819a-f979e4fd8d2b)
+![image](https://github.com/user-attachments/assets/d17987c0-3339-4210-b7d4-acd6dcecca18)
 
+![image](https://github.com/user-attachments/assets/a54269da-01e6-4f44-b30c-c739cd6fcea4)
 
-
-
+![image](https://github.com/user-attachments/assets/8d9475fd-32ad-4661-a591-57792d35c6ec)
+![image](https://github.com/user-attachments/assets/d0b24282-436b-4a9a-ad59-d6068bb4fe28)
 
 
 
