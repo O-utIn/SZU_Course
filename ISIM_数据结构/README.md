@@ -219,4 +219,36 @@ base=NULL表示栈不存在\
 
 
 # 4.串
+![image](https://github.com/user-attachments/assets/a6733aed-6874-4047-8064-5f28ee24a99e)
+![image](https://github.com/user-attachments/assets/32146ca2-56ac-42bc-b9fd-05c6fdbd24d4)
+![image](https://github.com/user-attachments/assets/231e829b-4aa7-4732-83c8-e42a65650aad)
+
+## 串的表现和实现
+![image](https://github.com/user-attachments/assets/3a42454e-e512-4b37-88ac-965f671d5d1f)
+
+## 串的模式匹配算法
+![image](https://github.com/user-attachments/assets/9bef8f9c-6831-4a5f-9b94-7bd3c28cdd9f)
+![image](https://github.com/user-attachments/assets/23bebd62-1b4d-4324-b36a-3efc78af9b57)
+穷举法的比较示例\
+主串：a b a b c a b c a c b a b\
+模式串：a b c a c
+
+![image](https://github.com/user-attachments/assets/06fdc8d5-ae8b-4d92-9cf7-bdddaabae2bd)
+
+![image](https://github.com/user-attachments/assets/7c796d01-5595-41e4-a06d-f1acc67c11be)
+
+![image](https://github.com/user-attachments/assets/131ff62b-3f60-4d88-8447-630bd1fbfca1)
+
+![image](https://github.com/user-attachments/assets/179e2d2d-12f4-42e7-9f5b-32e9c6d94e6b)
+![image](https://github.com/user-attachments/assets/be023fbe-8ba1-4455-b40d-18f66a962359)
+
+![image](https://github.com/user-attachments/assets/3c477915-e325-475f-a6b5-52fc2f2963af)
+![image](https://github.com/user-attachments/assets/e6363b34-8dab-4527-9190-da1ee15532e6)
+![image](https://github.com/user-attachments/assets/a0579d7c-09a0-449b-8ebc-1ef377369ac1)
+
+![image](https://github.com/user-attachments/assets/dbcfa881-f78b-4142-85a7-1421f597e02d)
+
+![image](https://github.com/user-attachments/assets/27aad905-788d-4ed1-8223-4bf8b0ae64e3)
+
+
 
