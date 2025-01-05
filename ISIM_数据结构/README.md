@@ -1,3 +1,4 @@
+
 # 数据结构复习提纲
 该复习提纲主要针对概念题与计算题，不含代码部分，具体算法实现代码请自行复习
 
@@ -398,13 +399,49 @@ n个结点的不同二叉树形态有![image](https://github.com/user-attachment
 ![image](https://github.com/user-attachments/assets/45403747-318b-4d07-8108-2402122d9f4d)
 ![image](https://github.com/user-attachments/assets/873564ca-37dd-41f8-b9f2-77827a6464af)
 
+![image](https://github.com/user-attachments/assets/d122cfe3-e093-4696-a2c0-db70c97bcb22)
+![image](https://github.com/user-attachments/assets/55a8dc60-4dd4-4c67-a165-77543c7aea63)
+![image](https://github.com/user-attachments/assets/d50c9de9-a3bf-424c-a086-6d6830e35b7a)
 
 
+![image](https://github.com/user-attachments/assets/3ced489b-b945-4a64-bc38-a2ddfe0b39cb)
+![image](https://github.com/user-attachments/assets/ccc200da-846b-4784-9067-07f9dce4d7da)
 
 
+## 树和森林
+![image](https://github.com/user-attachments/assets/c861f923-bb6d-41ac-881c-10322577f0b6)
 
+![image](https://github.com/user-attachments/assets/b70087e0-ae81-4079-9c3e-45a9a48d63ba)
+![image](https://github.com/user-attachments/assets/e376b190-f86a-46a0-86b7-d912a8813656)
+![image](https://github.com/user-attachments/assets/5affc43b-5338-4a13-b2c0-3077355f724b)
+![image](https://github.com/user-attachments/assets/b198807b-eac0-4511-b354-5234369de3d2)
 
+![image](https://github.com/user-attachments/assets/a272cdd1-d390-4419-bc8a-a4a6b988aef5)
+![image](https://github.com/user-attachments/assets/4f38981f-3403-4900-b17c-1270ab065445)
 
+![image](https://github.com/user-attachments/assets/81dfdda6-ed62-4ccd-9c37-da90ef802429)
+![image](https://github.com/user-attachments/assets/08ae5efc-1c7c-42d3-9457-85e3fc42b2b2)
 
+![image](https://github.com/user-attachments/assets/d5df4d56-79dc-419f-ae5b-0a2cb0b4a57e)
+![image](https://github.com/user-attachments/assets/8b04cb00-591a-468a-89d4-a3e2ff380871)
+![image](https://github.com/user-attachments/assets/e9c5d913-21cb-4008-b880-91b3a2cd7220)
+![image](https://github.com/user-attachments/assets/425f2caa-fe15-4456-a010-5344896ccbc8)
 
+![image](https://github.com/user-attachments/assets/686335cf-2bb4-41e7-827d-d5da732fada6)
+![image](https://github.com/user-attachments/assets/fb15c2e9-38ca-420b-8269-1440bf02b32c)
 
+![image](https://github.com/user-attachments/assets/debc1b3d-e236-4eb3-ae02-823c0f676f6c)
+![image](https://github.com/user-attachments/assets/397d3824-2545-4e96-bc59-9535cea2ac88)
+![image](https://github.com/user-attachments/assets/ea47389c-7c48-4bc3-8c85-beb87c18de94)
+
+![image](https://github.com/user-attachments/assets/890ccf27-823c-4f2d-b7c6-d249168d54fd)
+![image](https://github.com/user-attachments/assets/beb3613e-e3d8-401d-89df-3f9278f616fc)
+
+![image](https://github.com/user-attachments/assets/a8d6a9cd-44d7-4d2e-adc0-5c70c871d8a2)
+![image](https://github.com/user-attachments/assets/d0845a95-71bb-4efd-b353-a8a515632dae)
+
+![image](https://github.com/user-attachments/assets/fce5c5db-01f1-4051-b5c0-be2650ea7131)
+![image](https://github.com/user-attachments/assets/afe54b66-df92-4aa4-93b9-40557c16c4e5)
+
+![image](https://github.com/user-attachments/assets/2def40ae-8cc4-430d-863e-de79a51694ec)
+![image](https://github.com/user-attachments/assets/2ebe53d7-3333-442f-996c-333c633dc9db)
