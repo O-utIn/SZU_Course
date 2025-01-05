@@ -445,3 +445,17 @@ n个结点的不同二叉树形态有![image](https://github.com/user-attachment
 
 ![image](https://github.com/user-attachments/assets/2def40ae-8cc4-430d-863e-de79a51694ec)
 ![image](https://github.com/user-attachments/assets/2ebe53d7-3333-442f-996c-333c633dc9db)
+
+
+# 7.图
+图(Graph)是一种比线性表和树更为复杂的数据结构。\
+线性结构：是研究数据元素之间的一对一关系，数据元素之间有明显顺序管理\
+树结构：是研究数据元素之间的一对多的关系，数据元素之间有明显的层次关系\
+图结构：是研究数据元素之间的多对多的关系。任意两个元素之间可能存在关系，即结点之间的关系可以是任意的，图中任意元素之间都可能相关。
+
+![image](https://github.com/user-attachments/assets/60a6cd04-5f83-484e-a663-1b754a42d64b)
+
+
+
+
+
