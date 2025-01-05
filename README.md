@@ -1,4 +1,4 @@
-# SZU_Course_Homework
+# SZU_Course_Data
 
 #### BE_电路分析实验：生医工《电路分析》23-24学年实验内容
 #### EE_C程序设计：电信学院《C程序设计》23-24学年内容
