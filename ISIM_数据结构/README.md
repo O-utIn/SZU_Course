@@ -292,7 +292,70 @@ base=NULL表示栈不存在\
 ![image](https://github.com/user-attachments/assets/77fdab8b-8244-4d6e-beb4-f6fddfa03770)
 ![image](https://github.com/user-attachments/assets/325e719b-b101-4476-82e1-ef258c9ce0e8)
 
+![image](https://github.com/user-attachments/assets/e2ec77b6-ae17-4034-a4ae-731c9d99fc18)
+![image](https://github.com/user-attachments/assets/56a8d95a-fa35-45fc-a843-bab7cb5f4aba)
 
+
+二叉树的形态数量问题属于树的计数问题\
+n个结点的不同二叉树形态有![image](https://github.com/user-attachments/assets/24f30070-5ab4-4368-9710-77929ded185f)种
+
+![image](https://github.com/user-attachments/assets/ad317959-26af-470a-9bcc-db1d527c2c21)
+
+![image](https://github.com/user-attachments/assets/60b0976b-f2cb-43ad-a27b-0f883f700b14)
+![image](https://github.com/user-attachments/assets/4a4c0811-f59e-442e-99ca-e566268ed814)
+
+
+树的遍历就是按某种次序访问树中的结点，要求每个结点访问一次且仅访问一次\
+一个二叉树由根结点与左子树和右子树组成，设访问根结点用D表示，遍历左、右子树用L、R表示，如果规定先左子树后右子树，则共有三种组合
+- DLR [先序遍历]
+- LDR [中序遍历]
+- LRD [后序遍历]
+
+先序遍历的递归算法\
+若二叉树为空，则返回；否则：
+- 访问当前结点(D)
+- 先序遍历左子树(L)
+- 先序遍历右子树(R)
+
+![image](https://github.com/user-attachments/assets/922989c6-10f5-4dcc-961a-044ed593d83a)
+
+先序表遍历结果：ABDEGCF\
+第一个输出结点必为根
+
+中序遍历的递归算法\
+若二叉树为空，则返回；否则：
+- 中序遍历左子树(L)
+- 访问当前结点(D)
+- 中先序遍历右子树(R)
+
+![image](https://github.com/user-attachments/assets/8b6efb2a-09ac-4da9-b7f1-19854122f609)
+
+中序表遍历结果：DBGEAFC\
+根结点A的左右子树分别在A的两边
+
+后序遍历的递归算法\
+若二叉树为空，则返回；否则：
+- 后序遍历左子树(L)
+- 后序遍历右子树(R)
+- 访问当前结点(D)
+  
+![image](https://github.com/user-attachments/assets/7b06fb96-5f1b-4dea-a2c9-a8b1c6e537f5)
+
+后序表遍历结果：DGEBFCA\
+最后一个输出结点必为根
+
+
+二叉树层次遍历，从根结点开始遍历，按层次“自上而下，从左至右”访问树中的各结点。\
+层次遍历的实现算法，设置一个队列：\
+设T是指向根结点的指针变量，若二叉树为空，则返回；否则，令p=T，p入队，执行以下循环：
+- (1)队首元素出队到p；
+- (2)访问p所指向的结点； 
+- (3)p所指向的结点的左、右子结点依次入队。
+- (4)跳转步骤1循环，直到队空为止。
+  
+![image](https://github.com/user-attachments/assets/b71cdd50-1db3-4a29-baed-2dff4a3306c7)
+
+层次遍历：ABCDEFG
 
 
 
