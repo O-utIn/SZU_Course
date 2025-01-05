@@ -455,6 +455,115 @@ n个结点的不同二叉树形态有![image](https://github.com/user-attachment
 
 ![image](https://github.com/user-attachments/assets/60a6cd04-5f83-484e-a663-1b754a42d64b)
 
+图的组成
+- 顶点(Vertex)，图中的数据元素称为顶点
+- 边，两顶点之间的连线是对称的，不分头尾，称为边
+- 弧，两顶点之间的连线，或两元素之间存在着关系，而且连线是不对称的，分头尾
+- 元素之间连线是边，则该图称为无向图
+- 元素之间连线是不对称的，则该图是有向图
+- 只有很少边或弧（e<nlogn）的图称为稀疏图，反之称为稠密图
+- 不存在又包含边又包含弧的图
+
+![image](https://github.com/user-attachments/assets/fde0183c-12cf-489b-a1a0-700f1dca3aa9)
+
+无向完全图：如果无向图有n(n-1)/2条边，则称为无向完全图\
+无向完全图是指图的任意两个顶点都有边
+
+无向图的术语
+- 邻接：如果(x,y)E,称x,y互为邻接点，即x,y相邻接
+- 依附：边(x,y)依附于顶点x,y
+- 相关联：边(x,y)与x,y相关联
+- 顶点的度：和顶点相关联的边的数目，记为TD(x)
+
+
+![image](https://github.com/user-attachments/assets/e55ad1fc-8a5d-4574-b111-88c4d2bb7359)
+![image](https://github.com/user-attachments/assets/91b82bf7-3588-41f6-9262-b24545d19c53)
+
+有向完全图：如果有向图有n(n-1)条弧，则称为有向完全图\
+有向完全图是指图的任意两个顶点都有两条弧
+
+![image](https://github.com/user-attachments/assets/29e01a16-93dd-4385-a190-1ea4edc5e307)
+
+有向图的术语
+- 邻接：如果<x,y>E,称x邻接到y,或y邻接自x
+- 相关联：弧<x,y>与x,y相关联
+- 入度：以顶点为头的弧的数目，记为ID(x)
+- 出度：以顶点为尾的弧的数目，记为OD(x)
+- 度：TD(x)=ID(x)+OD(x)
+
+图的分类-带权图，又称为网，是指图的边或弧带有权值
+- 无向带权图
+- 有向带权图
+![image](https://github.com/user-attachments/assets/7e24ca4a-5412-4714-adb1-54d8d44cc82c)
+
+
+![image](https://github.com/user-attachments/assets/593b4b07-6922-4565-a6af-c4f49778229e)
+![image](https://github.com/user-attachments/assets/64bafd97-3eb5-4310-99bf-5cba1e1545ef)
+![image](https://github.com/user-attachments/assets/3b8cb26e-b2d1-4dfc-876b-3964eca243ee)
+
+![image](https://github.com/user-attachments/assets/cf502200-47a1-4720-b05a-3d660e93bf5b)
+![image](https://github.com/user-attachments/assets/e4231fe7-282d-405b-8a9f-8d0e1794eba1)
+![image](https://github.com/user-attachments/assets/422adfd7-6b2d-49e3-bc41-e6dbb2711c43)
+
+## 图的存储结构
+![image](https://github.com/user-attachments/assets/ce98a06b-2093-462b-a030-b7c2d45ddadb)
+![image](https://github.com/user-attachments/assets/fe940588-bea8-4590-b86b-3f4cdc2b1d2c)
+![image](https://github.com/user-attachments/assets/fb09ecfd-968b-4cee-af48-c1c488ad02d5)
+![image](https://github.com/user-attachments/assets/38d096eb-c887-41bb-8059-d6b890d59452)
+![image](https://github.com/user-attachments/assets/22334811-fcae-43dd-86c5-e946e2d9e984)
+![image](https://github.com/user-attachments/assets/c0095777-b442-4e0b-91d1-73b5e92e4889)
+![image](https://github.com/user-attachments/assets/f270bd73-37e7-43a9-8326-9f5ce3962b03)
+![image](https://github.com/user-attachments/assets/ba974829-bfc5-4f87-a7cc-54c888bbeef7)
+![image](https://github.com/user-attachments/assets/d4e2c1db-c0f4-48e9-96ed-5a332b21ea7f)
+![image](https://github.com/user-attachments/assets/65f5a04d-41af-4db9-8ef1-44b33c33dd60)
+![image](https://github.com/user-attachments/assets/6558fdac-1414-4bc8-ba3f-73b1c600d6ff)
+![image](https://github.com/user-attachments/assets/8ffb50a9-268f-46f4-9247-2f39f7bd8f3c)
+
+## 图的遍历
+![image](https://github.com/user-attachments/assets/1b7ed57e-31f0-40ca-a900-729a5154c73f)
+![image](https://github.com/user-attachments/assets/45aa2a57-f854-46db-aaeb-edf84cb8433a)
+![image](https://github.com/user-attachments/assets/440f8dc1-a34c-4aa7-aa9d-51ddeb1dfce3)
+![image](https://github.com/user-attachments/assets/81356fd0-12d7-4136-a45d-58fdbb47186b)
+![image](https://github.com/user-attachments/assets/0ed6e045-3463-4677-810d-c42517363fb5)
+![image](https://github.com/user-attachments/assets/8f7e93dc-1161-41d8-afa8-6d14c361cc86)
+![image](https://github.com/user-attachments/assets/630313e6-8a6d-4f12-88fc-319287614829)
+
+![image](https://github.com/user-attachments/assets/f779e286-48a3-49ba-b5b8-33c0febb1b5a)
+![image](https://github.com/user-attachments/assets/6c940a36-1143-45cd-ab49-7864bc7ebe42)
+![image](https://github.com/user-attachments/assets/d966ea2c-886a-4eef-a364-1da79155542c)
+![image](https://github.com/user-attachments/assets/c1c9eeb3-9540-4c31-b011-8cb9c335705a)
+![image](https://github.com/user-attachments/assets/b9f4b160-846b-4cc3-87e6-e5852f5dc4e1)
+![image](https://github.com/user-attachments/assets/c3e44765-6a78-4f5b-a588-2cdce30ce5b9)
+
+### 图的连通
+![image](https://github.com/user-attachments/assets/a3c6cc4a-b331-44eb-80d3-048a051f03ec)
+![image](https://github.com/user-attachments/assets/4e15c609-1b46-4683-9fcb-e95a7bf29aeb)
+![image](https://github.com/user-attachments/assets/4ac9b488-7f66-4955-8ae9-7502c818a938)
+![image](https://github.com/user-attachments/assets/ed83c913-cff2-4cb2-be8f-a01b4d975cd8)
+
+
+### 最小生成树算法
+![image](https://github.com/user-attachments/assets/0aed4edf-62a9-401f-89ac-78852cfef40d)
+![image](https://github.com/user-attachments/assets/cc4e1b5f-d624-4f74-8e83-4b5bedeab244)
+![image](https://github.com/user-attachments/assets/ffa7f505-5b02-4ac9-afb2-896dbe4abb04)
+![image](https://github.com/user-attachments/assets/3b19855e-841c-490a-95f3-fd2bbc3297ef)
+![image](https://github.com/user-attachments/assets/53ab4546-5337-4f95-940b-b080323a2c5d)
+
+![image](https://github.com/user-attachments/assets/ea53afc7-9c0f-4e77-bc8c-b351862e02ba)
+![image](https://github.com/user-attachments/assets/ba46b4a9-c591-4b90-84f1-779edf28ba08)
+![image](https://github.com/user-attachments/assets/a3cf480f-55a3-4d5b-be3a-201da02f3b15)
+![image](https://github.com/user-attachments/assets/d8c808c6-727d-484c-a6be-0a1961aab59a)
+
+
+
+
+
+
+
+
+
+
+
 
 
 
