@@ -255,13 +255,60 @@ base=NULL表示栈不存在\
 
 
 # 6.树
-树是有n（n>=0）个结点的有限集合。每个结点都有唯一的直接前驱，但可能有多个直接后继\
+树是有n（n>=0）个结点的有限集合。每个结点都有唯一的直接前驱，但可能有多个直接后继
 
 树的特点
 - 如果n=0，称为空树
 - 如果n>0,称为非空树
 - 树可以递归定义
 - 如果n>1，则除根结点以外的其他结点划分为m（m>0）个互不相交的有限集T1，T2，...，Tm，其中每个集合本身又是一棵树，并且称为树的子树SubTree
+
+树结构的术语：
+- 结点：包含一个数据元素及若干指向其子树的分支
+- 分支：结点之间的连接
+- 结点的度：结点拥有的子树数
+- 树的度：树中结点度的最大值称为树的度
+- 叶结点：度为0的结点[没有子树的结点]
+- 分支结点：度不为0的结点[包括根结点]，也称为非终端结点。
+- 分支结点包含根结点，除根外的分支结点又称为内部结点
+
+![image](https://github.com/user-attachments/assets/4651d2a2-d48f-4556-b112-f68322f796c9)
+
+其他术语\
+层次：根结点为第一层，其孩子为第二层，依此类推\
+深度：树中结点的最大层次
+![image](https://github.com/user-attachments/assets/017e4bab-b876-4993-bc67-a40c754b6dcd)
+
+森林：互不相交的树的集合。对树中每个结点而言，其子树的集合即为森林
+![image](https://github.com/user-attachments/assets/778c630f-b3ec-4ce9-a906-35979f4e4fe2)
+
+
+![image](https://github.com/user-attachments/assets/5a07c670-0985-4739-a741-7fcfad3d2343)
+
+![image](https://github.com/user-attachments/assets/4115fa56-01a1-49ae-ba26-cc47ae271c6c)
+![image](https://github.com/user-attachments/assets/93f73a5b-a58e-41a6-893c-5c84f959840c)
+
+![image](https://github.com/user-attachments/assets/1a5e1870-f176-4968-9e39-1609973a3201)
+![image](https://github.com/user-attachments/assets/77fdab8b-8244-4d6e-beb4-f6fddfa03770)
+![image](https://github.com/user-attachments/assets/325e719b-b101-4476-82e1-ef258c9ce0e8)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
