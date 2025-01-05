@@ -555,6 +555,8 @@ n个结点的不同二叉树形态有![image](https://github.com/user-attachment
 ![image](https://github.com/user-attachments/assets/d8c808c6-727d-484c-a6be-0a1961aab59a)
 
 
+![image](https://github.com/user-attachments/assets/3316215e-7d20-40f0-bf0a-b5320d5eb133)
+![image](https://github.com/user-attachments/assets/4bf222f7-b9d2-4cf0-a9e8-5c00e5328a90)
 
 
 
