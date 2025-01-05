@@ -358,14 +358,45 @@ n个结点的不同二叉树形态有![image](https://github.com/user-attachment
 层次遍历：ABCDEFG
 
 
+![image](https://github.com/user-attachments/assets/95d846b9-5f4b-4216-b0d4-026b898a0d70)
+![image](https://github.com/user-attachments/assets/021a64ed-58a6-4d48-9105-fa9c8af0e9a6)
+![image](https://github.com/user-attachments/assets/17cc240e-145e-4857-8c4c-2780dc3036ba)
 
 
+二叉树构建有以下方法：
+- 第1种方法：特定的先序遍历字符串来生成二叉树
+- 第2种方法：已知二叉树的顺序存储，利用二叉树性质5生成二叉树
+- 第3种方法：已知二叉树的先序+中序或者中序+后序，生成二叉树
+
+二叉树构建第1种方法：特定的先序遍历字符串来生成二叉树\
+用特定字符表示空树，例如0。\
+二叉树的先序遍历包含空孩子指针遍历，生成特定的先序遍历字符串\
+例如ABC00DE0G00F000
+
+![image](https://github.com/user-attachments/assets/52dcc7ea-c92f-44c0-9dcc-e2e529c13883)
+
+二叉树构建第2种方法：已知二叉树的顺序存储，通过二叉树性质5构建二叉树
+![image](https://github.com/user-attachments/assets/3d54dba5-28ab-4b69-b9bf-6ed82b4c3140)
+![image](https://github.com/user-attachments/assets/3ad94335-7dc8-43c6-851a-3d198a59a1c1)
 
 
+![image](https://github.com/user-attachments/assets/82b626ef-b900-4fe1-a527-7ce322e4ab4d)
+
+![image](https://github.com/user-attachments/assets/44a8e0aa-a38f-471a-b056-b00af9143a62)
 
 
+![image](https://github.com/user-attachments/assets/35a916fb-0099-4cdf-b831-75c654d8f843)
+![image](https://github.com/user-attachments/assets/aac1c3bc-c7eb-46e1-9c1c-af9c1e00b02a)
 
 
+![image](https://github.com/user-attachments/assets/9779d2d2-08b3-44ac-b9c1-4d5c6881622b)
+![image](https://github.com/user-attachments/assets/93b33930-df61-43b6-8bf5-f8c4d892c144)
+![image](https://github.com/user-attachments/assets/7052ba3d-88e2-4401-a877-f5297997297f)
+![image](https://github.com/user-attachments/assets/5a08d772-1d22-400f-aa95-32e79d0c80cd)
+
+![image](https://github.com/user-attachments/assets/08ae73d0-e4a5-4bc5-b0d5-1d32e01e44f3)
+![image](https://github.com/user-attachments/assets/45403747-318b-4d07-8108-2402122d9f4d)
+![image](https://github.com/user-attachments/assets/873564ca-37dd-41f8-b9f2-77827a6464af)
 
 
 
