@@ -1,0 +1,43 @@
+product/productId: B000NLZ4A2
+product/title: Casio Men's G1710D-7AV G-Shock Ana-Digi Sport Watch
+product/price: unknown
+review/userId: AEM9CCSE7CQ9M
+review/profileName: Charlie White "Tech-Guy"
+review/helpfulness: 0/0
+review/score: 4.0
+review/time: 1260230400
+review/summary: Unique G-Shock Design, same G-Shock Quality
+review/text: Having owned two previous G-Shocks in my life (including the first series in 1984), I've long appreciated their quality. The main reason I stopped wearing them was simply because the resin straps would break, and having worn them for 4 years I grew weary of them. However, having burned through many fashion watches in the last 10 years I've been disappointed to spend $$$ only to get 1 or 2 years' worth of usage. So I'm back to G-Shock. I think this model (G1710D-7AV) represents a nice blend between good looks and practical durability...which most guys really want. The face is smaller on my wrist than I expected from a G-Shock, but I think it's still classy for the office. The side buttons are hidden in gray plastic (which you can't see in picture), but the rest of the watch is metal. You might find a classier analog-face G-Shock in the $200 - $300, but this one is a better value! The only reason I didn't give it 5 stars is because the LED isn't backlight. It's an amber light that comes around the inside bevel. So the LED helps you read the dial hands, but not the LCD screens. Nonetheless, it's still a cool light color. PS- the bottom LCD screen isn't blue as pictured, but it's still a different color than the top LCD which adds further distinction to the watch.
+
+product/productId: B000NLZ4A2
+product/title: Casio Men's G1710D-7AV G-Shock Ana-Digi Sport Watch
+product/price: unknown
+review/userId: AA6ESFOYCNJKG
+review/profileName: Marco Antonio Hernandez Lara
+review/helpfulness: 0/0
+review/score: 4.0
+review/time: 1216339200
+review/summary: Nice Watch
+review/text: Thats a good watch, light, comfortable, accurate and very eyecatch, I ve got another GShock, I have wear it for eight years, I have to replace the band and the rubber shock cover one year ago because it was deteriorated, now it looks brand new again, with this stainless steel model I dont have to worry about that any more, I will not give it five stars because it has plastic and rubber parts in the case, but I recomend it, this is the better price I could find
+
+product/productId: B000NLZ4A2
+product/title: Casio Men's G1710D-7AV G-Shock Ana-Digi Sport Watch
+product/price: unknown
+review/userId: A2X0RB3JKV4E7C
+review/profileName: Mary Perez
+review/helpfulness: 1/2
+review/score: 5.0
+review/time: 1245024000
+review/summary: Is it battery powered or Solar/
+review/text: I am ready to purchase this beautiful watch but I am confused whether is solar or not? Any help, please?
+
+product/productId: B000AIO6RA
+product/title: Seiko Men's Criteria "Orange Bullet" Automatic Diver Watch with Rubber Band Model SKXA55K2
+product/price: unknown
+review/userId: AIZ446JTDW9B5
+review/profileName: Mike Robbins
+review/helpfulness: 3/3
+review/score: 5.0
+review/time: 1122422400
+review/summary: 2005 Latest Seiko Diver Models
+review/text: 2005 Latest model from Seiko Model SKXA53K2. Professional diver's watch stainless steel case with Oyster bracelet from Seiko Japan. A very Good water resistance of up to 200 meters. It also comes with unidirectional rotating bezel. Stainless steel back with wave logo. Very Good value for the money.
