@@ -1,0 +1,66 @@
+/* 全局样式设置 */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* 登录容器样式 */
+.login-container {
+    background-color: white;
+    width: 300px;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    margin: 100px auto; /* 让容器在页面中垂直居中 */
+}
+
+/* 标题样式 */
+.login-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* 表单组样式（包含标签和输入框） */
+.form-group {
+    margin-bottom: 15px;
+}
+
+/* 标签样式 */
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* 输入框样式 */
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+/* 按钮样式 */
+button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    width: 100%;
+}
+
+/* 鼠标悬停在按钮上的样式变化 */
+button:hover {
+    background-color: #0056b3;
+}
+
+/* 用于显示登录提示信息的div样式 */
+#loginMessage {
+    margin-top: 10px;
+    color: red;
+    text-align: center;
+}

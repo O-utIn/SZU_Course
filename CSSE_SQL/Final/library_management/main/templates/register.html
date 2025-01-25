@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>图书管理系统 - 注册</title>
+  <style>
+    /* 基本样式 */
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+      background-color: #f4f4f4;
+    }
+
+    .register-container {
+      background-color: white;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 400px;
+      margin: 0 10px; /* 使内容左右均衡 */
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      color: #555;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      margin-bottom: 10px;
+      font-size: 14px;
+      background-color: #f9f9f9;
+    }
+
+    input:focus, select:focus {
+      border-color: #007bff;
+      outline: none;
+    }
+
+    button {
+      width: 100%;
+      background-color: #007bff;
+      color: white;
+      padding: 12px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    .register-link {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .register-link a {
+      color: #007bff;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .register-link a:hover {
+      text-decoration: underline;
+    }
+
+    #registerMessage {
+      text-align: center;
+      color: red;
+      margin-top: 15px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="register-container">
+    <h2>注册</h2>
+    <form id="registerForm">
+      <div class="form-group">
+        <label for="username">用户名</label>
+        <input type="text" id="username" required placeholder="请输入用户名">
+      </div>
+      <div class="form-group">
+        <label for="password">密码</label>
+        <input type="password" id="password" required placeholder="请输入密码">
+      </div>
+      <div class="form-group">
+        <label for="email">电子邮件</label>
+        <input type="email" id="email" required placeholder="请输入电子邮件">
+      </div>
+      <div class="form-group">
+        <label for="phone_number">手机号</label>
+        <input type="tel" id="phone_number" required placeholder="请输入手机号">
+      </div>
+      <div class="form-group">
+        <label for="user_type">用户类型</label>
+        <select id="user_type" required>
+          <option value="reader">Reader</option>
+          <option value="librarian">Librarian</option>
+          <option value="admin">Admin</option>
+        </select>
+      </div>
+      <button type="submit">注册</button>
+    </form>
+    <div id="registerMessage"></div>
+    <div class="register-link">
+      <a href="{{ url_for('login_page') }}">已有账号？点击登录</a>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('registerForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      const username = document.getElementById('username').value;
+      const password = document.getElementById('password').value;
+      const email = document.getElementById('email').value;
+      const phone_number = document.getElementById('phone_number').value;
+      const user_type = document.getElementById('user_type').value;
+
+      fetch('http://localhost:5000/register', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          username: username,
+          password: password,
+          email: email,
+          phone_number: phone_number,
+          user_type: user_type
+        })
+      })
+      .then(response => response.json())
+      .then(data => {
+        if (data.message === '注册成功') {
+          window.location.href = '/?page=login_page'; // 注册成功后跳转到登录页面
+        } else {
+          document.getElementById('registerMessage').innerText = data.message;
+        }
+      })
+      .catch(error => {
+        console.error('Error:', error);
+        document.getElementById('registerMessage').innerText = '注册失败，请稍后再试。';
+      });
+    });
+  </script>
+</body>
+
+</html>

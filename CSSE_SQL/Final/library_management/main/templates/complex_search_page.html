@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>复杂查询页面</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+        }
+        h2 {
+            color: #2c3e50;
+        }
+       .results {
+            margin-bottom: 30px;
+        }
+       .results ul {
+            list-style-type: none;
+            padding: 0;
+            max-height: 300px;  /* 限制列表的最大高度 */
+            overflow-y: auto;   /* 添加滚动条 */
+        }
+       .results li {
+            background: #f4f4f4;
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 5px;
+        }
+       .results p {
+            font-size: 16px;
+            padding: 10px;
+            background: #f4f4f4;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>复杂查询结果</h1>
+
+    <div class="results">
+        <h2>所有书籍</h2>
+        <ul>
+            {% for book in all_books %}
+                <li>{{ book.title }} (ID: {{ book.book_id }})</li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <div class="results">
+        <h2>书籍与作者及出版社</h2>
+        <ul>
+            {% for book in inner_join_books %}
+                <li>{{ book.title }} - 作者: {{ book.author_name }} - 出版社: {{ book.publisher_name }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <div class="results">
+        <h2>按出版社统计的书籍数量</h2>
+        <ul>
+            {% for publisher in grouped_books %}
+                <li>{{ publisher.publisher_name }}: {{ publisher.book_count }} 本书</li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <div class="results">
+        <h2>最近三年发布的书籍</h2>
+        <ul>
+            {% for book in recent_books %}
+                <li>{{ book.title }} (出版年: {{ book.publication_year }})</li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <div class="results">
+        <h2>拥有最多书籍的出版社</h2>
+        <p>{{ publisher_with_most_books }}</p>
+    </div>
+
+    <div class="results">
+        <h2>借阅次数高于平均借阅次数的书籍</h2>
+        <ul>
+            {% for book in books_above_avg_borrow %}
+                <li>{{ book.title }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <div class="results">
+        <h2>所有图书和借阅记录的书名</h2>
+        <ul>
+            {% for book in union_books %}
+                <li>{{ book.title }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <div class="results">
+        <h2>每本书的类别及借阅记录</h2>
+        <ul>
+            {% for record in multi_table_books %}
+                <li>{{ record.title }} - 类别: {{ record.category_name }} - 借阅日期: {{ record.borrow_date }} - 到期日期: {{ record.due_date }} - 是否归还: {% if record.return_date %}{{ record.return_date }}{% else %}未归还{% endif %}</li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <div class="results">
+        <h2>所有借阅记录中都被借阅过的书籍</h2>
+        <ul>
+            {% for book in books_borrowed_by_all %}
+                <li>{{ book.title }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>图书管理系统 - 图书页面</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0 50px;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+        }
+
+        .header.welcome {
+            font-size: 16px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th,
+        td {
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #007bff;
+            color: white;
+        }
+
+        .action-buttons {
+            margin-top: 20px;
+            display: flex;
+            justify-content: flex-start;
+        }
+
+        .action-buttons button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+
+        .action-buttons button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Search box styles */
+        .search-box {
+            margin: 20px;
+            text-align: center;
+        }
+
+        input[type="text"] {
+            padding: 10px;
+            font-size: 16px;
+            width: 80%;
+            max-width: 500px;
+            margin-right: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        button[type="button"] {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button[type="button"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- 顶部显示欢迎信息 -->
+    <div class="header">
+        <div class="welcome" id="welcomeMessage">欢迎，正在加载用户名...</div>
+    </div>
+
+    <!-- Search Box -->
+    <div class="search-box">
+        <input type="text" id="searchInput" placeholder="请输入书名进行搜索...">
+        <button type="button" onclick="searchBooks()">搜索</button>
+    </div>
+
+    <h1 style="text-align: center; padding: 20px;">图书列表</h1>
+    <table id="bookTable">
+        <thead>
+            <tr>
+                <th>图书ID</th>
+                <th>书名</th>
+                <th>作者</th>
+                <th>出版社</th>
+                <th>出版年份</th>
+                <th>ISBN</th>
+                <th>类别</th>
+                <th>总册数</th>
+                <th>可借册数</th>
+                <th>操作</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- 通过JS动态生成图书列表 -->
+        </tbody>
+    </table>
+
+    <div class="action-buttons">
+        <!-- 删除"添加图书"按钮 -->
+    </div>
+
+
+    <script>
+        let currentBookId = null;
+
+        // 获取当前用户的用户名并显示在顶部
+        function loadUserInfo() {
+            const username = sessionStorage.getItem('username');  // 假设用户名存储在 sessionStorage 中
+            const welcomeMessage = document.getElementById('welcomeMessage');
+            if (username) {
+                welcomeMessage.innerText = `欢迎，${username}`;
+            } else {
+                welcomeMessage.innerText = '欢迎，游客';
+            }
+        }
+
+        // 获取图书数据并显示
+        function loadBooks(query = '') {
+            const url = query ? `/books/search?title=${encodeURIComponent(query)}` : '/books';  // 如果有查询条件，加到URL中
+            fetch(url)
+                .then(response => response.json())
+                .then(books => {
+                    const tableBody = document.querySelector('#bookTable tbody');
+                    tableBody.innerHTML = '';
+                    books.forEach(book => {
+                        const row = document.createElement('tr');
+                        row.innerHTML = `
+                            <td>${book.book_id}</td>
+                            <td>${book.title}</td>
+                            <td>${book.author}</td>
+                            <td>${book.publisher}</td>
+                            <td>${book.publication_year}</td>
+                            <td>${book.isbn}</td>
+                            <td>${book.category}</td>
+                            <td>${book.total_copies}</td>
+                            <td>${book.available_copies}</td>
+                            <td>
+                                <button onclick="borrowBook(${book.book_id})">借书</button>
+                                <button onclick="returnBook(${book.book_id})">还书</button>
+                            </td>
+                        `;
+                        tableBody.appendChild(row);
+                    });
+                })
+                .catch(error => {
+                    console.error('加载图书失败:', error);
+                    alert('加载图书列表出现问题，请稍后再试');
+                });
+        }
+
+        // 搜索图书
+        function searchBooks() {
+            const query = document.getElementById('searchInput').value.trim();
+            loadBooks(query);  // 根据输入的书名查询图书
+        }
+
+        // 借书操作，添加可借册数判断
+        function borrowBook(bookId) {
+            console.log("借书按钮被点击，图书ID:", bookId);  // 添加调试信息
+            fetch(`/books/${bookId}`)
+                .then(response => response.json())
+                .then(book => {
+                    console.log("图书数据:", book);  // 打印图书信息以调试
+                    if (book.available_copies <= 0) {
+                        alert('该书目前无可借册数，无法借阅');
+                        return;
+                    }
+                    // 这里可以添加更多逻辑，比如记录借书操作相关信息等，暂保持原逻辑打开借书的弹出框
+                    showBookModal(bookId, 'borrow');
+                })
+                .catch(error => {
+                    console.error("请求图书信息失败:", error);
+                    alert('获取图书信息失败，请稍后再试');
+                });
+        }
+
+        // 还书操作，添加是否借阅判断（需后端配合实现对应查询接口）
+        function returnBook(bookId) {
+            const user_id = sessionStorage.getItem('user_id'); // 假设登录后将用户ID存放在sessionStorage中，需根据实际情况调整获取方式
+            if (!user_id) {
+                alert('请先登录');
+                return;
+            }
+            fetch(`/check_borrowed/${user_id}/${bookId}`)
+                .then(response => response.json())
+                .then(isBorrowed => {
+                    if (isBorrowed) {
+                        showBookModal(bookId, 'return');
+                    } else {
+                        alert('你未借阅此书，无法进行还书操作');
+                    }
+                })
+                .catch(error => {
+                    console.error("检查借阅状态失败:", error);
+                    alert('检查借阅状态出现问题，请稍后再试');
+                });
+        }
+
+        // 打开借书/还书模态框
+        function showBookModal(bookId, action) {
+            const modal = document.getElementById('bookModal');
+            const modalTitle = document.getElementById('modalTitle');
+            const bookForm = document.getElementById('bookForm');
+            const bookTitle = document.getElementById('title');
+            const bookAuthor = document.getElementById('author');
+            const bookPublisher = document.getElementById('publisher');
+            const bookPublicationYear = document.getElementById('publication_year');
+            const bookIsbn = document.getElementById('isbn');
+            const bookCategory = document.getElementById('category');
+            const bookTotalCopies = document.getElementById('total_copies');
+            const bookAvailableCopies = document.getElementById('available_copies');
+            bookForm.reset();
+
+            fetch(`/books/${bookId}`)
+                .then(response => response.json())
+                .then(book => {
+                    document.getElementById('bookId').value = bookId;
+                    bookTitle.value = book.title;
+                    bookAuthor.value = book.author;
+                    bookPublisher.value = book.publisher;
+                    bookPublicationYear.value = book.publication_year;
+                    bookIsbn.value = book.isbn;
+                    bookCategory.value = book.category;
+                    bookTotalCopies.value = book.total_copies;
+                    bookAvailableCopies.value = book.available_copies;
+
+                    if (action === 'borrow') {
+                        modalTitle.innerText = '借书';
+                        bookAvailableCopies.setAttribute('disabled', 'disabled');
+                    } else if (action === 'return') {
+                        modalTitle.innerText = '还书';
+                        bookAvailableCopies.setAttribute('disabled', 'disabled');
+                    }
+
+                    modal.style.display = "block";
+                });
+        }
+
+        // 关闭模态框
+        function closeModal() {
+            const modal = document.getElementById('bookModal');
+            modal.style.display = "none";
+        }
+
+        // 页面加载时获取用户信息并显示，同时加载图书数据
+        window.onload = function () {
+            loadUserInfo();
+            loadBooks();  // 初次加载时显示所有图书
+        }
+    </script>
+
+</body>
+
+</html>

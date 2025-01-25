@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>图书管理系统 - 图书页面</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0 50px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th,
+        td {
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #007bff;
+            color: white;
+        }
+
+        .action-buttons {
+            margin-top: 20px;
+            display: flex;
+            justify-content: flex-start;
+        }
+
+        .action-buttons button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+
+        .action-buttons button:hover {
+            background-color: #0056b3;
+        }
+
+        /* 搜索框样式 */
+        .search-box {
+            margin: 20px;
+            text-align: center;
+        }
+
+        input[type="text"] {
+            padding: 10px;
+            font-size: 16px;
+            width: 80%;
+            max-width: 500px;
+            margin-right: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        button[type="button"] {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button[type="button"]:hover {
+            background-color: #0056b3;
+        }
+
+        /* Modal (hidden by default) */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.4);
+            padding-top: 60px;
+        }
+
+        /* Modal Content */
+        .modal-content {
+            background-color: #fff;
+            margin: 5% auto;
+            padding: 30px;
+            border-radius: 8px;
+            width: 80%;
+            max-width: 600px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .modal-content h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #007bff;
+        }
+
+        .close {
+            color: #aaa;
+            font-size: 30px;
+            font-weight: bold;
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            cursor: pointer;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        label {
+            font-weight: bold;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        input[type="text"],
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        button[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        /* Center align modal content */
+        .modal-content form {
+            display: flex;
+            flex-direction: column;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- 用于显示欢迎信息的元素 -->
+    <div id="welcome-message" style="position: absolute; top: 10px; right: 10px; font-size: 14px;"></div>
+
+    <h1 style="text-align: center; padding: 20px;">图书列表</h1>
+
+    <!-- 搜索框 -->
+    <div class="search-box">
+        <input type="text" id="searchInput" placeholder="请输入书名进行搜索...">
+        <button type="button" onclick="searchBooks()">搜索</button>
+    </div>
+
+    <!-- 图书表格 -->
+    <table id="bookTable">
+        <thead>
+            <tr>
+                <th>图书ID</th>
+                <th>书名</th>
+                <th>作者</th>
+                <th>出版社</th>
+                <th>出版年份</th>
+                <th>ISBN</th>
+                <th>类别</th>
+                <th>总册数</th>
+                <th>可借册数</th>
+                <th>操作</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- 通过JS动态生成图书列表 -->
+        </tbody>
+    </table>
+
+    <div class="action-buttons">
+        <button id="addBookBtn" onclick="showAddBookModal()">添加图书</button>
+        <button onclick="window.location.href='{{ url_for('complex_search_page') }}'">复杂搜索</button>
+    </div>
+
+
+    <!-- Add/Edit Book Modal -->
+    <div id="bookModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2 id="modalTitle">添加图书</h2>
+            <form id="bookForm">
+                <input type="hidden" id="bookId">
+
+                <label for="title">书名:</label>
+                <input type="text" id="title" name="title" required>
+
+                <label for="author">作者:</label>
+                <input type="text" id="author" name="author" required>
+
+                <label for="publisher">出版社:</label>
+                <input type="text" id="publisher" name="publisher" required>
+
+                <label for="publication_year">出版年份:</label>
+                <input type="number" id="publication_year" name="publication_year" required>
+
+                <label for="isbn">ISBN:</label>
+                <input type="text" id="isbn" name="isbn" required>
+
+                <label for="category">类别:</label>
+                <input type="text" id="category" name="category" required>
+
+                <label for="total_copies">总册数:</label>
+                <input type="number" id="total_copies" name="total_copies" required>
+
+                <label for="available_copies">可借册数:</label>
+                <input type="number" id="available_copies" name="available_copies" required>
+
+                <button type="submit">提交</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        let currentBookId = null;
+
+        // 获取图书数据并显示
+        function loadBooks(query = '') {
+            const url = query ? `/books/search?title=${encodeURIComponent(query)}` : '/books';  // 如果有查询条件，加到URL中
+            fetch(url)
+                .then(response => response.json())
+                .then(books => {
+                    const tableBody = document.querySelector('#bookTable tbody');
+                    tableBody.innerHTML = '';  // 清空当前表格
+                    books.forEach(book => {
+                        const row = document.createElement('tr');
+                        row.innerHTML = `
+                            <td>${book.book_id}</td>
+                            <td>${book.title}</td>
+                            <td>${book.author}</td>
+                            <td>${book.publisher}</td>
+                            <td>${book.publication_year}</td>
+                            <td>${book.isbn}</td>
+                            <td>${book.category}</td>
+                            <td>${book.total_copies}</td>
+                            <td>${book.available_copies}</td>
+                            <td>
+                                <button onclick="showEditBookModal(${book.book_id})">编辑</button>
+                                <button onclick="deleteBook(${book.book_id})">删除</button>
+                            </td>
+                        `;
+                        tableBody.appendChild(row);
+                    });
+                })
+                .catch(error => console.error('加载图书失败:', error));
+        }
+
+        // 搜索图书
+        function searchBooks() {
+            const query = document.getElementById('searchInput').value.trim();
+            loadBooks(query);  // 根据输入的书名查询图书
+        }
+
+        // 打开添加图书的弹出框
+        function showAddBookModal() {
+            currentBookId = null; // 清除任何之前的图书ID
+            document.getElementById('bookForm').reset();
+            document.getElementById('modalTitle').innerText = '添加图书';
+            const modal = document.getElementById("bookModal");
+            modal.style.display = "block";
+        }
+
+        // 打开编辑图书的弹出框
+        function showEditBookModal(bookId) {
+            currentBookId = bookId;
+            fetch(`/books/${bookId}`)
+                .then(response => response.json())
+                .then(book => {
+                    document.getElementById('modalTitle').innerText = '编辑图书';
+                    document.getElementById('bookId').value = book.book_id;
+                    document.getElementById('title').value = book.title;
+                    document.getElementById('author').value = book.author;
+                    document.getElementById('publisher').value = book.publisher;
+                    document.getElementById('publication_year').value = book.publication_year;
+                    document.getElementById('isbn').value = book.isbn;
+                    document.getElementById('category').value = book.category;
+                    document.getElementById('total_copies').value = book.total_copies;
+                    document.getElementById('available_copies').value = book.available_copies;
+                    const modal = document.getElementById("bookModal");
+                    modal.style.display = "block";
+                })
+                .catch(error => console.error('获取图书信息失败:', error));
+        }
+
+        // 提交表单并添加/更新图书
+        document.getElementById('bookForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            const bookData = {
+                title: document.getElementById('title').value,
+                author: document.getElementById('author').value,
+                publisher: document.getElementById('publisher').value,
+                publication_year: document.getElementById('publication_year').value,
+                isbn: document.getElementById('isbn').value,
+                category: document.getElementById('category').value,
+                total_copies: document.getElementById('total_copies').value,
+                available_copies: document.getElementById('available_copies').value
+            };
+
+            const method = currentBookId ? 'PUT' : 'POST';
+            const url = currentBookId ? `/books/${currentBookId}` : '/books';
+
+            fetch(url, {
+                method: method,
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(bookData)
+            })
+                .then(response => response.json())
+                .then(data => {
+                    alert(data.message);
+                    loadBooks();
+                    closeModal();
+                })
+                .catch(error => console.error('添加/更新图书失败:', error));
+        });
+
+        // 删除图书
+        function deleteBook(bookId) {
+            if (confirm('确定要删除这本书吗？')) {
+                fetch(`/books/${bookId}`, {
+                    method: 'DELETE'
+                })
+                    .then(response => response.json())
+                    .then(data => {
+                        alert(data.message);
+                        loadBooks();
+                    })
+                    .catch(error => console.error('删除图书失败:', error));
+            }
+        }
+
+        // 关闭弹出框
+        function closeModal() {
+            const modal = document.getElementById("bookModal");
+            modal.style.display = "none";
+        }
+
+        // 页面加载时获取图书数据并设置欢迎信息
+        window.onload = function () {
+            const username = sessionStorage.getItem('username');
+            if (username) {
+                const welcomeMessageElement = document.getElementById('welcome-message');
+                welcomeMessageElement.innerHTML = `欢迎，${username}`;
+            }
+            loadBooks();  // 初次加载时显示所有图书
+        }
+    </script>
+
+</body>
+
+</html>
