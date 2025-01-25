@@ -1,0 +1,440 @@
+-- use mysql;
+
+-- DROP TABLE IF EXISTS EMP;
+-- CREATE TABLE IF NOT EXISTS EMP (
+--   EMPNO int NOT NULL,
+--   ENAME varchar(10) NOT NULL,
+--   JOB char(9) NOT NULL,
+--   MGR int DEFAULT NULL REFERENCES EMP(EMPNO),
+--   HIREDATE varchar(9) DEFAULT NULL,
+--   SAL float NOT NULL CHECK(SAL>5000),
+--   COMM float DEFAULT NULL,
+--   DEPTNO float(2) NOT NULL REFERENCES DEPT,
+--   PRIMARY KEY (EMPNO)
+-- );
+
+-- INSERT INTO EMP (EMPNO,ENAME,JOB,MGR,HIREDATE,SAL,COMM,DEPTNO) VALUES
+-- (7369,'SMITH','CLERK',7902,'17-DEC-90',13750,NULL,20),  
+-- (7499,'ALLEN','SALESMAN',7698,'20-FEB-89',19000,6400,30),  
+-- (7521,'WARD','SALESMAN',7698,'22-FEB-93',18500,4250,30),  
+-- (7566,'JONES','MANAGER',7839,'02-APR-89',26850,NULL,20),  
+-- (7654,'MARTIN','SALESMAN',7698,'28-SEP-97',15675,3500,30),  
+-- (7698,'BLAKE','MANAGER',7839,'01-MAY-90',24000,NULL,30),  
+-- (7782,'CLARK','MANAGER',7839,'09-JUN-88',27500,NULL,10),  
+-- (7788,'SCOTT','ANALYST',7566,'19-APR-87',19500,NULL,20),  
+-- (7839,'KING','PRESIDENT',NULL,'17-NOV-83',82500,NULL,10),  
+-- (7844,'TURNER','SALESMAN',7698,'08-SEP-92',18500,6250,30),  
+-- (7876,'ADAMS','CLERK',7788,'23-MAY-96',11900,NULL,20),  
+-- (7900,'JAMES','CLERK',7698,'03-DEC-95',12500,NULL,30),  
+-- (7902,'FORD','ANALYST',7566,'03-DEC-91',21500,NULL,20),  
+-- (7934,'MILLER','CLERK',7782,'23-JAN-95',13250,NULL,10),
+-- (3258,'GREEN','SALESMAN',4422,'24-JUL-95',18500,2750,50),
+-- (4422,'STEVENS','MANAGER',7839,'14-JAN-94',24750,NULL,50),
+-- (6548,'BARNES','CLERK',4422,'16-JAN-95',11950,NULL,50),
+-- (7500,'CAMPBELL','ANALYST',7566,'30-OCT-92',24500,0,40);
+
+
+-- DROP TABLE IF EXISTS DEPT;
+-- CREATE TABLE IF NOT EXISTS DEPT (
+-- 	DEPTNO INT NOT NULL,
+--     DNAME varchar(10),
+--     LOC varchar(10),
+--     PRIMARY KEY(DEPTNO)
+-- );
+
+-- INSERT INTO DEPT (DEPTNO,DNAME,LOC) VALUES
+-- (10,'ACCOUNTING','LONDON'),
+-- (30,'SALES','LIVERPOOL'),
+-- (40,'OPERATIONS','STAFFORD'),
+-- (50,'MARKETING','LUTON'),
+-- (20,'RESEARCH','PRESTON');
+
+-- show tables;
+-- select * from EMP;
+
+-- -- Lab2--2-1
+-- select ENAME,SAL from EMP
+-- JOIN DEPT ON EMP.DEPTNO=DEPT.DEPTNO
+-- WHERE LOC="LUTON";
+
+-- -- 2-2
+-- select EMP.*,DEPT.DNAME,DEPT.LOC from EMP
+-- JOIN DEPT ON EMP.DEPTNO=DEPT.DEPTNO
+-- ORDER BY DEPTNO;
+
+-- -- 2-3
+-- select EMP.ENAME,DEPT.DNAME from EMP
+-- JOIN DEPT ON EMP.DEPTNO=DEPT.DEPTNO
+-- WHERE DNAME="SALES";
+
+-- -- 2-4
+-- select * from DEPT;
+-- select DNAME,LOC from DEPT
+-- LEFT JOIN EMP ON DEPT.DEPTNO=EMP.DEPTNO
+-- WHERE EMP.EMPNO IS NULL;
+
+-- -- 2-5
+-- select * from EMP;
+-- select
+-- 	E1.ENAME AS ENAME,
+-- 	E1.SAL AS ESAL,
+-- 	E2.ENAME AS MGR,
+-- 	E2.SAL AS MGRSAL
+-- from EMP E1
+-- JOIN EMP E2 ON E1.MGR=E2.EMPNO
+-- WHERE E1.SAL>E2.SAL;
+
+-- -- 2-6
+-- select
+-- 	E1.ENAME AS ENAME,
+--     E2.ENAME AS MGRNAME
+-- from EMP E1
+-- JOIN EMP E2 ON E1.MGR=E2.EMPNO
+-- WHERE E2.ENAME="BLAKE";
+
+-- -- 2-7
+-- select
+-- 	E1.ENAME AS ENAME,
+--     E2.ENAME AS MGRNAME
+-- from EMP E1
+-- LEFT JOIN EMP E2 ON E1.MGR=E2.EMPNO;
+
+-- -- 3-1
+-- select count(*) from EMP where JOB="MANAGER";
+
+-- -- 3-2
+-- select avg(SAL+COMM) from EMP where JOB="SALESMAN";
+
+-- -- 3-3
+-- select max(SAL) as maxSal,
+-- min(SAL) as minSal,
+-- max(SAL)-min(SAL) as salDiff
+-- from EMP;
+
+-- -- 3-4
+-- select max(length(DNAME)) from DEPT;
+
+-- -- 3-5
+-- select sum(case when DEPTNO=30 and SAL is not NULL then 1 else 0 end) as salary,
+-- sum(case when DEPTNO=30 and COMM is not NULL then 1 else 0 end) as commission from EMP;
+
+-- -- 3-6
+-- select avg(COMM) as onlyE,avg(coalesce(COMM,0)) as allE from EMP;
+
+-- -- 3-7
+-- select avg(SAL) as case1,
+-- avg(COMM) as case2,
+-- avg(case when COMM is not NULL then (SAL+COMM) else 0 end) as case3,
+-- avg(sal+coalesce(comm,0)) as case4
+-- from EMP;
+
+-- -- 3-8
+-- select EMPNO,ENAME,SAL,
+-- round(SAL/22,2) as daily,
+-- round(SAL/(22*8),2) as hourly
+-- from EMP where DEPTNO=30; 
+
+-- -- 3-9
+-- select EMPNO,ENAME,SAL,
+-- truncate(SAL/22,2) as daily,
+-- truncate(SAL/(22*8),2) as hourly
+-- from EMP where DEPTNO=30; 
+
+-- -- 4-1
+-- select ENAME,JOB,
+-- DATE_FORMAT(STR_TO_DATE(HIREDATE, '%d-%b-%y'), '%m/%d/%y') AS HIREDATE_FORMATTED
+-- from EMP where DEPTNO=20;
+
+-- -- 4-2
+-- SELECT ENAME,JOB,
+-- DATE_FORMAT(STR_TO_DATE(HIREDATE, '%d-%b-%y'), '%W, %d %M %Y') AS HIREDATE_FORMATTED
+-- FROM EMP;
+
+-- -- 4-3
+-- SELECT *
+-- FROM EMP
+-- WHERE MONTH(STR_TO_DATE(HIREDATE, '%d-%b-%y')) = 3;
+
+-- -- 4-4
+-- SELECT *
+-- FROM EMP
+-- WHERE DAYOFWEEK(STR_TO_DATE(HIREDATE, '%d-%b-%y')) = 3;
+
+-- -- 4-5
+-- SELECT *
+-- FROM EMP
+-- WHERE DATEDIFF(CURDATE(), STR_TO_DATE(HIREDATE, '%d-%b-%y')) > 16 * 365;
+
+-- -- 4-6
+-- SELECT 
+--     ENAME,
+--     DAYNAME(DATE_SUB(STR_TO_DATE(HIREDATE, '%d-%b-%y'), 
+--     INTERVAL DAYOFMONTH(STR_TO_DATE(HIREDATE, '%d-%b-%y')) - 1 DAY)) 
+--     AS FIRST_DAY_OF_MONTH_WEEKDAY
+-- FROM EMP;
+
+-- -- 4-7
+-- DELIMITER //
+-- CREATE FUNCTION LAST_FRIDAY(input_date DATE)
+-- RETURNS DATE
+-- BEGIN
+--     DECLARE last_day DATE;
+--     DECLARE last_friday DATE;
+--     
+--     SET last_day = LAST_DAY(input_date);
+--     
+--     SET last_friday = DATE_SUB(last_day, INTERVAL (WEEKDAY(last_day) - 4) % 7 DAY);
+--     
+--     RETURN last_friday;
+-- END //
+-- DELIMITER ;
+
+-- SELECT 
+--     ENAME,
+--     STR_TO_DATE(HIREDATE, '%d-%b-%y') AS HIREDATE,
+--     LAST_FRIDAY_OF_MONTH(STR_TO_DATE(HIREDATE, '%d-%b-%y')) AS FIRST_PAYDAY
+-- FROM EMP;
+
+-- -- 4-8
+-- DELIMITER //
+-- CREATE FUNCTION NEXT_LAST_FRIDAY(input_date DATE)
+-- RETURNS DATE
+-- DETERMINISTIC
+-- BEGIN
+--     DECLARE last_day DATE;
+--     DECLARE last_friday DATE;
+--     DECLARE next_last_friday DATE;
+
+--     SET last_day = LAST_DAY(input_date);
+
+--     SET last_friday = DATE_SUB(last_day, INTERVAL (WEEKDAY(last_day) - 4) % 7 DAY);
+
+--     IF input_date > last_friday THEN
+--         SET last_day = LAST_DAY(DATE_ADD(input_date, INTERVAL 1 MONTH));
+--         SET next_last_friday = DATE_SUB(last_day, INTERVAL (WEEKDAY(last_day) - 4) % 7 DAY);
+--         RETURN next_last_friday;
+--     ELSE
+--         RETURN last_friday;
+--     END IF;
+-- END //
+-- DELIMITER ;
+
+-- SHOW CREATE FUNCTION NEXT_LAST_FRIDAY;
+-- SELECT ENAME,
+--     STR_TO_DATE(HIREDATE, '%d-%b-%y') AS HIREDATE,
+--     NEXT_LAST_FRIDAY(STR_TO_DATE(HIREDATE, '%d-%b-%y')) AS FIRST_PAYDAY
+-- FROM EMP;
+
+-- -- 5-1
+-- SELECT DEPTNO,AVG(SAL) AS AVERAGE_SALARY
+-- FROM EMP GROUP BY DEPTNO;
+
+-- -- 5-2
+-- SELECT DEPTNO,JOB,
+--     COUNT(*) AS EMPLOYEE_COUNT,
+--     AVG(SAL) * 12 AS AVG_SAL
+-- FROM EMP GROUP BY DEPTNO, JOB;
+
+-- -- 5-3
+-- SELECT DEPT.DNAME,EMP.JOB,
+--     COUNT(*) AS EMPLOYEE_COUNT,
+--     AVG(EMP.SAL) * 12 AS AVG_SALARY
+-- FROM EMP
+-- JOIN DEPT ON EMP.DEPTNO = DEPT.DEPTNO
+-- GROUP BY DEPT.DNAME, EMP.JOB;
+
+-- -- 5-4
+-- SELECT 
+--     JOB,
+--     COUNT(*) AS EMPLOYEE_COUNT,
+--     AVG(SAL) * 12 AS AVG_SAL
+-- FROM EMP GROUP BY JOB HAVING COUNT(*) > 2;
+
+-- -- 5-5
+-- SELECT 
+--     DEPTNO,
+--     AVG(SAL) AS AVG_SAL,
+--     AVG(COMM) AS AVG_COMM
+-- FROM EMP GROUP BY DEPTNO
+-- HAVING AVG(COMM) > 0.25 * AVG(SAL);
+
+-- -- 5-6
+-- SELECT 
+--     DEPTNO,
+--     AVG(SAL) * 12 AS AVG_SAL
+-- FROM EMP WHERE JOB NOT IN ('MANAGER', 'PRESIDENT')
+-- GROUP BY DEPTNO;
+
+-- -- 5-7A
+-- SELECT DEPT.DEPTNO,DEPT.DNAME
+-- FROM EMP JOIN DEPT ON EMP.DEPTNO = DEPT.DEPTNO
+-- GROUP BY DEPT.DEPTNO, DEPT.DNAME
+-- HAVING 
+--     SUM(CASE WHEN EMP.JOB = 'MANAGER' THEN 1 ELSE 0 END) >= 1
+--     AND SUM(CASE WHEN EMP.JOB = 'CLERK' THEN 1 ELSE 0 END) >= 2;
+--     
+-- -- 5-7B
+-- WITH CompanyAverage AS (
+--     SELECT AVG(SAL) AS AVG_SAL
+--     FROM EMP
+-- )
+-- SELECT DEPT.DEPTNO,DEPT.DNAME,
+-- 		AVG(EMP.SAL) AS DEPT_AVG,
+-- 		(SELECT AVG_SAL FROM CompanyAverage) AS COMPANY_AVG
+-- FROM EMP JOIN DEPT ON EMP.DEPTNO = DEPT.DEPTNO
+-- GROUP BY DEPT.DEPTNO, DEPT.DNAME
+-- HAVING 
+--     SUM(CASE WHEN EMP.JOB = 'MANAGER' THEN 1 ELSE 0 END) >= 1
+--     AND SUM(CASE WHEN EMP.JOB = 'CLERK' THEN 1 ELSE 0 END) >= 2
+--     AND AVG(EMP.SAL) > (SELECT AVG_SAL FROM CompanyAverage);
+--     
+-- -- 5-8
+-- WITH MECount AS (
+--     SELECT 
+--         MGR,
+--         COUNT(*) AS ECOUNT
+--     FROM EMP
+--     WHERE MGR IS NOT NULL
+--     GROUP BY MGR
+-- )
+-- SELECT EMP.ENAME AS MANAGER_NAME,
+-- 		MECOUNT.ECOUNT AS EMPLOYEES_COUNT
+-- FROM MECount
+-- JOIN EMP ON MECount.MGR = EMP.EMPNO
+-- WHERE MECount.ECOUNT = (SELECT MAX(ECOUNT) FROM MECount);
+
+-- -- 5-9
+-- WITH MECount AS (
+--     SELECT 
+--         MGR,
+--         COUNT(*) AS ECOUNT
+--     FROM EMP
+--     WHERE MGR IS NOT NULL
+--     GROUP BY MGR
+-- )
+-- SELECT 
+--     EMP.ENAME AS MANAGER_NAME,
+--     MECOUNT.ECOUNT AS EMPLOYEES_COUNT
+-- FROM MECount
+-- JOIN EMP ON MECOUNT.MGR = EMP.EMPNO
+-- WHERE MECOUNT.ECOUNT >= 2;
+
+-- -- 6-1
+-- SELECT ENAME,JOB FROM EMP
+-- WHERE JOB = (SELECT JOB FROM EMP WHERE ENAME = 'JONES')
+--   AND ENAME != 'JONES';
+--   
+-- -- 6-2
+-- SELECT ENAME,JOB FROM EMP
+-- WHERE 
+-- 	DEPTNO = 10
+--     AND JOB IN (SELECT JOB FROM EMP WHERE DEPTNO = 30);
+--     
+-- -- 6-3
+-- SELECT ENAME,JOB,DEPTNO FROM EMP
+-- WHERE 
+--     JOB = (SELECT JOB FROM EMP WHERE ENAME = 'JONES') OR 
+--     SAL >= (SELECT SAL FROM EMP WHERE ENAME = 'FORD');
+--     
+-- -- 6-4
+-- SELECT ENAME,JOB,DEPTNO FROM EMP
+-- WHERE DEPTNO = 10 AND
+-- 	JOB IN (SELECT JOB FROM EMP WHERE DEPTNO = 30);
+--     
+-- -- 6-5
+-- SELECT EMP.ENAME,EMP.JOB,DEPT.LOC
+-- FROM EMP
+-- JOIN DEPT ON EMP.DEPTNO = DEPT.DEPTNO
+-- WHERE 
+--     DEPT.LOC = 'LIVERPOOL'
+--     AND EMP.JOB = (SELECT JOB FROM EMP WHERE ENAME = 'ALLEN')
+-- ORDER BY EMP.ENAME ASC;
+
+-- -- 6-6
+-- SELECT 
+--     e1.ENAME AS EMPLOYEE_NAME,
+--     e1.SAL AS SALARY,
+--     e1.DEPTNO AS DEPARTMENT_NUMBER
+-- FROM EMP e1
+-- WHERE e1.SAL > (SELECT AVG(e2.SAL) FROM EMP e2 WHERE e2.DEPTNO = e1.DEPTNO);
+
+-- -- 6-7
+-- SELECT ENAME,SAL FROM EMP
+-- WHERE SAL > (SELECT SAL FROM EMP WHERE ENAME = 'JONES');
+
+-- -- 6-8
+-- WITH RankedSal AS (
+--     SELECT ENAME,SAL,
+--         DENSE_RANK() OVER (ORDER BY SAL DESC) AS SalRank
+--     FROM EMP
+-- )
+-- SELECT ENAME,SAL FROM RankedSal
+-- WHERE SalRank <= 2;
+
+-- -- 7-1
+-- DROP TABLE IF EXISTS LOANS;
+-- CREATE TABLE IF NOT EXISTS LOANS(
+--     LNO INT(3) PRIMARY KEY,
+--     EMPNO INT(4) NOT NULL,
+--     TYPE CHAR(1) CHECK (TYPE IN ('M', 'C')),
+--     AMNT DOUBLE(8,2) CHECK (AMNT > 0),
+--     CONSTRAINT FK_L_EMPNO FOREIGN KEY (EMPNO) REFERENCES EMP (EMPNO)
+-- );
+
+-- -- 7-2
+-- INSERT INTO LOANS (LNO, EMPNO, TYPE, AMNT) VALUES
+-- (23, 7499, 'M', 20000.00),
+-- (42, 7499, 'C', 2000.00),
+-- (65, 7844, 'M', 3564.00);
+
+-- -- 7-3
+-- SELECT * FROM LOANS;
+
+-- -- 7-4
+-- ALTER TABLE LOANS ADD OUTST DOUBLE(8,2);
+
+-- -- 7-5
+-- SET SQL_SAFE_UPDATES = 0;
+-- UPDATE LOANS
+-- SET OUTST = AMNT * 1.10
+-- WHERE TYPE = 'M';
+-- SELECT * FROM LOANS WHERE TYPE = 'M';
+
+-- -- 7-6
+-- DELETE FROM LOANS
+-- WHERE AMNT < 3000.00;
+-- SELECT * FROM LOANS;
+
+-- -- 7-7
+-- RENAME TABLE LOANS TO ACCOUNTS;
+-- SELECT * FROM ACCOUNTS;
+
+-- -- 7-8
+-- ALTER TABLE ACCOUNTS RENAME COLUMN LNO TO LOANNO;
+-- SELECT * FROM ACCOUNTS;
+
+-- -- 7-9
+-- CREATE VIEW DEPT30 AS
+-- SELECT ENAME, EMPNO, JOB, HIREDATE
+-- FROM EMP
+-- WHERE DEPTNO = 30;
+-- SELECT * FROM DEPT30;
+
+-- -- 7-10
+-- SELECT ENAME, EMPNO, JOB, HIREDATE
+-- FROM DEPT30
+-- WHERE JOB != 'SALESMAN';
+
+-- -- 7-11
+-- CREATE VIEW DEPT_SUMMARY AS
+-- SELECT 
+--     DEPT.DEPTNO,
+--     DEPT.DNAME,
+--     COUNT(EMP.EMPNO) AS EMP_COUNT,
+--     AVG(EMP.SAL) AS AVG_SAL,
+--     MAX(EMP.SAL) AS MAX_SAL,
+--     MIN(EMP.SAL) AS MIN_SAL
+-- FROM EMP
+-- JOIN DEPT ON EMP.DEPTNO = DEPT.DEPTNO
+-- GROUP BY DEPT.DEPTNO, DEPT.DNAME;
+-- SELECT * FROM DEPT_SUMMARY;
