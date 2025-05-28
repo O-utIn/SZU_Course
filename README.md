@@ -10,3 +10,4 @@
 #### [CSSE_UML：计算机与软件学院《面向对象系统设计与分析》24-25学年内容](https://github.com/O-utIn/SZU_Course/tree/main/CSSE_UML)
 #### [CSSE_SQL：计算机与软件学院《数据库系统》24-25学年内容](https://github.com/O-utIn/SZU_Course/tree/main/CSSE_SQL)
 #### [CSSE_计算机网络：计算机与软件学院《计算机网络》24-25学年内容](https://github.com/O-utIn/SZU_Course/tree/6b2dbd7c4da48c38461391ff311d0c2e9e60f9c6/CSSE_%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C)
+#### [CSSE_计算机系统2：计算机与软件学院《计算机系统2》24-25学年内容](https://github.com/O-utIn/SZU_Course/tree/a3601f06430740e0a6f6d6f8e0e6ad63b3f338a8/CSSE_%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F2)
