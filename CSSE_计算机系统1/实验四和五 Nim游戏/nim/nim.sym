@@ -1,0 +1,37 @@
+//Symbol Name		Page Address
+//----------------	------------
+//	Anum                    3021
+//	Bnum                    3022
+//	Cnum                    3023
+//	DISPLAY                 309D
+//	DISPLAYR7               30AC
+//	NewLine                 3024
+//	PLAY                    30D1
+//	PLAYR7                  3102
+//	PUTBALL                 30C5
+//	PUTBALLR7               30CF
+//	Prompt1                 3025
+//	Prompt2                 3052
+//	PromptA                 30AD
+//	PromptB                 30B5
+//	PromptC                 30BD
+//	SaveR5                  3101
+//	Term                    3103
+//	Warning                 3107
+//	Win1                    307F
+//	Win2                    308E
+//	begin1                  3005
+//	begin2                  3014
+//	exit                    3020
+//	finish                  30CB
+//	nA                      3104
+//	nB                      3105
+//	nC                      3106
+//	o                       30D0
+//	output                  30C7
+//	player1                 3003
+//	player2                 3012
+//	return                  30FE
+//	testb                   30E4
+//	testc                   30ED
+//	warn                    30F5
