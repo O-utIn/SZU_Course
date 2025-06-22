@@ -4,6 +4,7 @@
 #### [CSSE_JAVA：计算机与软件学院《Java程序设计》24-25学年内容](https://github.com/O-utIn/SZU_Course/tree/main/CSSE_JAVA)
 #### [CSSE_SQL：计算机与软件学院《数据库系统》24-25学年内容](https://github.com/O-utIn/SZU_Course/tree/main/CSSE_SQL)
 #### [CSSE_UML：计算机与软件学院《面向对象系统设计与分析》24-25学年内容](https://github.com/O-utIn/SZU_Course/tree/main/CSSE_UML)
+#### [CSSE_操作系统：计算机与软件学院《操作系统》24-25学年内容](https://github.com/O-utIn/SZU_Course/tree/aaa5a5e74a8a79225df52e910d6be366b5668edc/CSSE_%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F)
 #### [CSSE_数字电路：计算机与软件学院《数字电路》24-25学年内容](https://github.com/O-utIn/SZU_Course/tree/b0683323bea211a365b3285d641add179c3b4513/CSSE_%E6%95%B0%E5%AD%97%E7%94%B5%E8%B7%AF)
 #### [CSSE_计算机系统1：计算机与软件学院《计算机系统1》24-25学年内容](https://github.com/O-utIn/SZU_Course/tree/bf4e449d89cd78121a3e44a607f3dded9d6ff1a3/CSSE_%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F1)
 #### [CSSE_计算机系统2：计算机与软件学院《计算机系统2》24-25学年内容](https://github.com/O-utIn/SZU_Course/tree/a3601f06430740e0a6f6d6f8e0e6ad63b3f338a8/CSSE_%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F2)
