@@ -15,3 +15,4 @@
 #### [EE_现代程序设计：电信学院《现代程序设计》22-23学年内容](https://github.com/O-utIn/SZU_Course/tree/main/EE_%E7%8E%B0%E4%BB%A3%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1)
 #### [ISIM_数据结构：管理学院《数据结构》23-24学年内容](https://github.com/O-utIn/SZU_Course/tree/main/ISIM_%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84)
 #### [ISIM_计算机网络：管理学院《计算机网络》23-24学年实验内容](https://github.com/O-utIn/SZU_Course/tree/main/ISIM_%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C)
+#### [大学物理实验(1)：《大学物理实验（1）》24-25学年实验内容](https://github.com/OutIn/SZU_Course/tree/cd618599f3872dc8a7da9c619f5974a0d12ce3e4/%E5%A4%A7%E5%AD%A6%E7%89%A9%E7%90%86%E5%AE%9E%E9%AA%8C(1))
