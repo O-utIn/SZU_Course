@@ -14,3 +14,4 @@ daddi r20,r0,4       ;  4->M[R20]
 sd r20,0(r13)           ; SET CONTROL = 4 
 
 halt
+
