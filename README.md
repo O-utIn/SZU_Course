@@ -2,6 +2,7 @@
 
 #### [BE_电路分析实验：生医工《电路分析》23-24学年实验内容](https://github.com/O-utIn/SZU_Course/tree/main/BE_%E7%94%B5%E8%B7%AF%E5%88%86%E6%9E%90%E5%AE%9E%E9%AA%8C)
 #### [CSSE_JAVA：计算机与软件学院《Java程序设计》24-25学年内容](https://github.com/O-utIn/SZU_Course/tree/main/CSSE_JAVA)
+#### [CSSE_NLP：计算机与软件学院《自然语言处理》25-26学年内容](https://github.com/O-utIn/SZU_Course/tree/a5f8284d85702a7eb2a125a59e06caf91f2d345e/CSSE_NLP)
 #### [CSSE_SQL：计算机与软件学院《数据库系统》24-25学年内容](https://github.com/O-utIn/SZU_Course/tree/main/CSSE_SQL)
 #### [CSSE_UML：计算机与软件学院《面向对象系统设计与分析》24-25学年内容](https://github.com/O-utIn/SZU_Course/tree/main/CSSE_UML)
 #### [CSSE_操作系统：计算机与软件学院《操作系统》24-25学年内容](https://github.com/O-utIn/SZU_Course/tree/aaa5a5e74a8a79225df52e910d6be366b5668edc/CSSE_%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F)
