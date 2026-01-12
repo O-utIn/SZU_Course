@@ -1,0 +1,26 @@
+﻿strategy,behavior,mean_prop_fraud,mean_prop_nonfraud,uplift,n_fraud,n_nonfraud
+Relevance,拒绝,0.002222222,0,inf,75,4
+Clarity,拒绝,0.008694605,0.002631579,3.303949904,346,76
+Clarity,请求,0.540834021,0.206406642,2.620235557,346,76
+Factual Authenticity,请求,0.645740741,0.249118391,2.592103848,570,1173
+Relevance,请求,0.622174603,0.4,1.555436508,75,4
+Personalization,请求,0.525535113,0.388103241,1.354111631,396,35
+Clarity,确认,0.194199009,0.146663534,1.324112436,346,76
+Factual Authenticity,确认,0.20942147,0.205295065,1.020099877,570,1173
+Personalization,确认,0.164186508,0.192456983,0.853107565,396,35
+Personalization,陈述,0.289246633,0.347759104,0.831744245,396,35
+Relevance,确认,0.137386243,0.2,0.686931217,75,4
+Relevance,陈述,0.238216931,0.4,0.595542328,75,4
+Factual Authenticity,拒绝,0.00502924,0.009851622,0.510498663,570,1173
+Clarity,陈述,0.256272364,0.644298246,0.397754248,346,76
+Personalization,拒绝,0.021031746,0.071680672,0.293408884,396,35
+Factual Authenticity,陈述,0.139808549,0.535734922,0.260965906,570,1173
+Relevance,其他,0,0,0,75,4
+Personalization,其他,0,0,0,396,35
+Clarity,其他,0,0,0,346,76
+Factual Authenticity,其他,0,0,0,570,1173
+Completeness,请求,0,0.7,0,0,2
+Completeness,陈述,0,0.1,0,0,2
+Completeness,确认,0,0.2,0,0,2
+Completeness,拒绝,0,0,0,0,2
+Completeness,其他,0,0,0,0,2
