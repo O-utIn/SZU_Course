@@ -8,6 +8,7 @@
 #### [CSSE_操作系统：计算机与软件学院《操作系统》24-25学年内容](https://github.com/O-utIn/SZU_Course/tree/aaa5a5e74a8a79225df52e910d6be366b5668edc/CSSE_%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F)
 #### [CSSE_数字电路：计算机与软件学院《数字电路》24-25学年内容](https://github.com/O-utIn/SZU_Course/tree/b0683323bea211a365b3285d641add179c3b4513/CSSE_%E6%95%B0%E5%AD%97%E7%94%B5%E8%B7%AF)
 #### [CSSE_算法设计与分析：计算机与软件学院《算法设计与分析》24-25学年内容](https://github.com/O-utIn/SZU_Course/tree/20b330d93554757e6e50af0fec01678a2ff9cb59/CSSE_%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90)
+#### [CSSE_编译原理：计算机与软件学院《编译原理》25-26学年内容](https://github.com/O-utIn/SZU_Course/tree/a4b07e9a5ef304d7efff37ff7e428490c150692b/CSSE_%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86)
 #### [CSSE_计算机系统1：计算机与软件学院《计算机系统1》24-25学年内容](https://github.com/O-utIn/SZU_Course/tree/bf4e449d89cd78121a3e44a607f3dded9d6ff1a3/CSSE_%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F1)
 #### [CSSE_计算机系统2：计算机与软件学院《计算机系统2》24-25学年内容](https://github.com/O-utIn/SZU_Course/tree/a3601f06430740e0a6f6d6f8e0e6ad63b3f338a8/CSSE_%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F2)
 #### [CSSE_计算机系统3：计算机与软件学院《计算机系统3》25-26学年内容](https://github.com/O-utIn/SZU_Course/tree/49532a4b35e07e41744096cfe867d71cb578d8f9/CSSE_%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F3)
