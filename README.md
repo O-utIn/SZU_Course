@@ -20,6 +20,7 @@
 #### [CSSE_软件体系结构与设计模式：计算机与软件学院《软件体系结构与设计模式》25-26学年内容](https://github.com/O-utIn/SZU_Course/tree/b7773e4cf37033d71f71e3c711a76186d0112c19/CSSE_%E8%BD%AF%E4%BB%B6%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F)
 #### [CSSE_软件工程：计算机与软件学院《软件工程》25-26学年内容](https://github.com/O-utIn/SZU_Course/tree/d0ded6b11429d996691982af1c2b97f90941eb7f/CSSE_%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B)
 #### [EE_C程序设计：电信学院《C程序设计》23-24学年内容](https://github.com/O-utIn/SZU_Course/tree/main/EE_C%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1)
+#### [EE_工程导论：电信学院《工程导论》23-24学年内容](https://github.com/O-utIn/SZU_Course/tree/5926afb82dee26a6e05689c41b85afd44ad82d31/EE_%E5%B7%A5%E7%A8%8B%E5%AF%BC%E8%AE%BA)
 #### [EE_数字电路：电信学院《数字电路》实验22-23学年内容](https://github.com/O-utIn/SZU_Course/tree/main/EE_%E6%95%B0%E5%AD%97%E7%94%B5%E8%B7%AF)
 #### [EE_现代程序设计：电信学院《现代程序设计》22-23学年内容](https://github.com/O-utIn/SZU_Course/tree/main/EE_%E7%8E%B0%E4%BB%A3%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1)
 #### [ISIM_数据结构：管理学院《数据结构》23-24学年内容](https://github.com/O-utIn/SZU_Course/tree/main/ISIM_%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84)
