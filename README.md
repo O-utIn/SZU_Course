@@ -24,6 +24,8 @@
 #### [ISIM_数据结构：管理学院《数据结构》23-24学年内容](https://github.com/O-utIn/SZU_Course/tree/main/ISIM_%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84)
 #### [ISIM_计算机网络：管理学院《计算机网络》23-24学年实验内容](https://github.com/O-utIn/SZU_Course/tree/main/ISIM_%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C)
 #### [大学物理实验（1）：《大学物理实验（1）》24-25学年实验内容](https://github.com/O-utIn/SZU_Course/tree/0994ad2da8457ad506d5e4c45e97df5eac1dc140/%E5%A4%A7%E5%AD%A6%E7%89%A9%E7%90%86%E5%AE%9E%E9%AA%8C(1))
+
+## 以下生命与海洋学院课程资料由@beforeugone520同学提供：
 #### [CLSO_化学海洋学：生命与海洋科学学院《化学海洋学》25-26学年课件](https://github.com/O-utIn/SZU_Course/tree/main/CLSO_%E5%8C%96%E5%AD%A6%E6%B5%B7%E6%B4%8B%E5%AD%A6)
 #### [CLSO_海洋地理信息系统：生命与海洋科学学院《海洋地理信息系统》25-26学年课件](https://github.com/O-utIn/SZU_Course/tree/main/CLSO_%E6%B5%B7%E6%B4%8B%E5%9C%B0%E7%90%86%E4%BF%A1%E6%81%AF%E7%B3%BB%E7%BB%9F)
 #### [CLSO_底栖与浮游生物：生命与海洋科学学院《底栖与浮游生物》25-26学年课件](https://github.com/O-utIn/SZU_Course/tree/main/CLSO_%E5%BA%95%E6%A0%96%E4%B8%8E%E6%B5%AE%E6%B8%B8%E7%94%9F%E7%89%A9)
