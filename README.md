@@ -23,6 +23,7 @@
 #### [EE_工程导论：电信学院《工程导论》23-24学年内容](https://github.com/O-utIn/SZU_Course/tree/5926afb82dee26a6e05689c41b85afd44ad82d31/EE_%E5%B7%A5%E7%A8%8B%E5%AF%BC%E8%AE%BA)
 #### [EE_数字电路：电信学院《数字电路》实验22-23学年内容](https://github.com/O-utIn/SZU_Course/tree/main/EE_%E6%95%B0%E5%AD%97%E7%94%B5%E8%B7%AF)
 #### [EE_现代程序设计：电信学院《现代程序设计》22-23学年内容](https://github.com/O-utIn/SZU_Course/tree/main/EE_%E7%8E%B0%E4%BB%A3%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1)
+#### [HITSZ_环境策论：深圳高校联盟互选课程——哈尔滨工业大学深圳校区《环境策论》](https://github.com/O-utIn/SZU_Course/tree/cf6bf201a721f8637874830922bdf0505bcb5b2f/HITSZ_%E7%8E%AF%E5%A2%83%E7%AD%96%E8%AE%BA)
 #### [ISIM_数据结构：管理学院《数据结构》23-24学年内容](https://github.com/O-utIn/SZU_Course/tree/main/ISIM_%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84)
 #### [ISIM_计算机网络：管理学院《计算机网络》23-24学年实验内容](https://github.com/O-utIn/SZU_Course/tree/main/ISIM_%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C)
 #### [大学物理实验（1）：《大学物理实验（1）》24-25学年实验内容](https://github.com/O-utIn/SZU_Course/tree/0994ad2da8457ad506d5e4c45e97df5eac1dc140/%E5%A4%A7%E5%AD%A6%E7%89%A9%E7%90%86%E5%AE%9E%E9%AA%8C(1))
