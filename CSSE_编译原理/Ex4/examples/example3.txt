@@ -1,0 +1,148 @@
+(base) wangweiqin@wangweiqindeMac-mini ex4 自底向上的语法分析程序设计 % cd "/Users/wangweiqin/Library/Mobile Documents/com~apple~CloudDocs/编译原理/实验/ex4 自底向上的语法分析程序设计/" && clang++ -std=c++11 lr0_pa
+rser.cpp -o lr0_parser && "/Users/wangweiqin/Library/Mobile Documents/com~apple~CloudDocs/编译原理/实验/ex4 自底向上的语法分析程序设计/"lr0_parser
+--- Grammar Productions ---
+0. S' -> S 
+1. S -> c A 
+2. S -> c c B 
+3. A -> c A 
+4. A -> a 
+5. B -> c c B 
+6. B -> b 
+Non-terminals: A B S S' 
+Terminals: $ a b c 
+
+--- Building Canonical Collection of LR(0) Items ---
+Processing State I0:
+  [S' -> . S ]
+  [S -> . c A ]
+  [S -> . c c B ]
+  Goto(I0, S) = I1 (New)
+  Goto(I0, c) = I2 (New)
+
+Processing State I1:
+  [S' -> S .]
+
+Processing State I2:
+  [S -> c . A ]
+  [S -> c . c B ]
+  [A -> . c A ]
+  [A -> . a ]
+  Goto(I2, A) = I3 (New)
+  Goto(I2, a) = I4 (New)
+  Goto(I2, c) = I5 (New)
+
+Processing State I3:
+  [S -> c A .]
+
+Processing State I4:
+  [A -> a .]
+
+Processing State I5:
+  [S -> c c . B ]
+  [A -> . c A ]
+  [A -> c . A ]
+  [A -> . a ]
+  [B -> . c c B ]
+  [B -> . b ]
+  Goto(I5, A) = I6 (New)
+  Goto(I5, B) = I7 (New)
+  Goto(I5, a) = I4
+  Goto(I5, b) = I8 (New)
+  Goto(I5, c) = I9 (New)
+
+Processing State I6:
+  [A -> c A .]
+
+Processing State I7:
+  [S -> c c B .]
+
+Processing State I8:
+  [B -> b .]
+
+Processing State I9:
+  [A -> . c A ]
+  [A -> c . A ]
+  [A -> . a ]
+  [B -> c . c B ]
+  Goto(I9, A) = I6
+  Goto(I9, a) = I4
+  Goto(I9, c) = I10 (New)
+
+Processing State I10:
+  [A -> . c A ]
+  [A -> c . A ]
+  [A -> . a ]
+  [B -> . c c B ]
+  [B -> c c . B ]
+  [B -> . b ]
+  Goto(I10, A) = I6
+  Goto(I10, B) = I11 (New)
+  Goto(I10, a) = I4
+  Goto(I10, b) = I8
+  Goto(I10, c) = I9
+
+Processing State I11:
+  [B -> c c B .]
+
+--- Building LR(0) Parsing Table ---
+
+--- LR(0) Parsing Table ---
+State | a     | b     | c     | $     |  | A     | B     | S     | 
+------+-------+-------+-------+-------+--+-------+-------+--------
+0     |       |       | s2    |       |  |       |       | 1     | 
+1     |       |       |       | acc   |  |       |       |       | 
+2     | s4    |       | s5    |       |  | 3     |       |       | 
+3     | r1    | r1    | r1    | r1    |  |       |       |       | 
+4     | r4    | r4    | r4    | r4    |  |       |       |       | 
+5     | s4    | s8    | s9    |       |  | 6     | 7     |       | 
+6     | r3    | r3    | r3    | r3    |  |       |       |       | 
+7     | r2    | r2    | r2    | r2    |  |       |       |       | 
+8     | r6    | r6    | r6    | r6    |  |       |       |       | 
+9     | s4    |       | s10   |       |  | 6     |       |       | 
+10    | s4    | s8    | s9    |       |  | 6     | 11    |       | 
+11    | r5    | r5    | r5    | r5    |  |       |       |       | 
+
+States (Item Sets):
+I0:
+  [S' -> . S ]
+  [S -> . c A ]
+  [S -> . c c B ]
+I1:
+  [S' -> S .]
+I2:
+  [S -> c . A ]
+  [S -> c . c B ]
+  [A -> . c A ]
+  [A -> . a ]
+I3:
+  [S -> c A .]
+I4:
+  [A -> a .]
+I5:
+  [S -> c c . B ]
+  [A -> . c A ]
+  [A -> c . A ]
+  [A -> . a ]
+  [B -> . c c B ]
+  [B -> . b ]
+I6:
+  [A -> c A .]
+I7:
+  [S -> c c B .]
+I8:
+  [B -> b .]
+I9:
+  [A -> . c A ]
+  [A -> c . A ]
+  [A -> . a ]
+  [B -> c . c B ]
+I10:
+  [A -> . c A ]
+  [A -> c . A ]
+  [A -> . a ]
+  [B -> . c c B ]
+  [B -> c c . B ]
+  [B -> . b ]
+I11:
+  [B -> c c B .]
+(base) wangweiqin@wangweiqindeMac-mini ex4 自底向上的语法分析程序设计 % 

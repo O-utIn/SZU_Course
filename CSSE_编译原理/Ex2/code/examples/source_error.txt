@@ -1,0 +1,4 @@
+int 0123;
+float num = 3.;
+let abcdefghijklmnopqrstuvwxyzabcdefg = 100;
+if num >= 50 then a = a + 1;

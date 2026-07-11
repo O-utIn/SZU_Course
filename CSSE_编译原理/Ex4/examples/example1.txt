@@ -1,0 +1,85 @@
+(base) wangweiqin@wangweiqindeMac-mini ex4 自底向上的语法分析程序设计 % cd "/Users/wangweiqin/Library/Mobile Documents/com~apple~CloudDocs/编译原理/实验/ex4 自底向上的语法分析程序设计/" && clang++ -std=c++11 lr0_pa
+rser.cpp -o lr0_parser && "/Users/wangweiqin/Library/Mobile Documents/com~apple~CloudDocs/编译原理/实验/ex4 自底向上的语法分析程序设计/"lr0_parser
+--- Grammar Productions ---
+0. S' -> S 
+1. S -> B B 
+2. B -> a B 
+3. B -> b 
+Non-terminals: B S S' 
+Terminals: $ a b 
+
+--- Building Canonical Collection of LR(0) Items ---
+Processing State I0:
+  [S' -> . S ]
+  [S -> . B B ]
+  [B -> . a B ]
+  [B -> . b ]
+  Goto(I0, B) = I1 (New)
+  Goto(I0, S) = I2 (New)
+  Goto(I0, a) = I3 (New)
+  Goto(I0, b) = I4 (New)
+
+Processing State I1:
+  [S -> B . B ]
+  [B -> . a B ]
+  [B -> . b ]
+  Goto(I1, B) = I5 (New)
+  Goto(I1, a) = I3
+  Goto(I1, b) = I4
+
+Processing State I2:
+  [S' -> S .]
+
+Processing State I3:
+  [B -> . a B ]
+  [B -> a . B ]
+  [B -> . b ]
+  Goto(I3, B) = I6 (New)
+  Goto(I3, a) = I3
+  Goto(I3, b) = I4
+
+Processing State I4:
+  [B -> b .]
+
+Processing State I5:
+  [S -> B B .]
+
+Processing State I6:
+  [B -> a B .]
+
+--- Building LR(0) Parsing Table ---
+
+--- LR(0) Parsing Table ---
+State | a     | b     | $     |  | B     | S     | 
+------+-------+-------+-------+--+-------+--------
+0     | s3    | s4    |       |  | 1     | 2     | 
+1     | s3    | s4    |       |  | 5     |       | 
+2     |       |       | acc   |  |       |       | 
+3     | s3    | s4    |       |  | 6     |       | 
+4     | r3    | r3    | r3    |  |       |       | 
+5     | r1    | r1    | r1    |  |       |       | 
+6     | r2    | r2    | r2    |  |       |       | 
+
+States (Item Sets):
+I0:
+  [S' -> . S ]
+  [S -> . B B ]
+  [B -> . a B ]
+  [B -> . b ]
+I1:
+  [S -> B . B ]
+  [B -> . a B ]
+  [B -> . b ]
+I2:
+  [S' -> S .]
+I3:
+  [B -> . a B ]
+  [B -> a . B ]
+  [B -> . b ]
+I4:
+  [B -> b .]
+I5:
+  [S -> B B .]
+I6:
+  [B -> a B .]
+(base) wangweiqin@wangweiqindeMac-mini ex4 自底向上的语法分析程序设计 % 

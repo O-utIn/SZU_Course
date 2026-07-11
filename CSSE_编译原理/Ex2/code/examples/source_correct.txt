@@ -1,0 +1,12 @@
+int a;
+let a = 30;
+float b = 3.14;
+if a < 10 then
+    a = a + 1;
+else
+    a = a - 1;
+fi
+// This is a comment line
+/* multi-line
+   comment block */
+program main;

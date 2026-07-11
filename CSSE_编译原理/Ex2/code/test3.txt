@@ -1,0 +1,5 @@
+if (count > 0) then
+    let result = 1;
+else
+    let result = 0;
+fi

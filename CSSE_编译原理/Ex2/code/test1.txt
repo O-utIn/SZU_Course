@@ -1,0 +1,4 @@
+float price;
+let price = 99.99;
+let total = price * 2;
+let avg = total / 3;

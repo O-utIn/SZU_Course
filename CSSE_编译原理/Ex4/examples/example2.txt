@@ -1,0 +1,162 @@
+(base) wangweiqin@wangweiqindeMac-mini ex4 自底向上的语法分析程序设计 % cd "/Users/wangweiqin/Library/Mobile Documents/com~apple~CloudDocs/编译原理/实验/ex4 自底向上的语法分析程序设计/" && clang++ -std=c++11 lr0_pa
+rser.cpp -o lr0_parser && "/Users/wangweiqin/Library/Mobile Documents/com~apple~CloudDocs/编译原理/实验/ex4 自底向上的语法分析程序设计/"lr0_parser
+--- Grammar Productions ---
+0. S' -> E 
+1. E -> E + T 
+2. E -> T 
+3. T -> T * F 
+4. T -> F 
+5. F -> ( E ) 
+6. F -> id 
+Non-terminals: E F S' T 
+Terminals: $ ( ) * + id 
+
+--- Building Canonical Collection of LR(0) Items ---
+Processing State I0:
+  [S' -> . E ]
+  [E -> . E + T ]
+  [E -> . T ]
+  [T -> . T * F ]
+  [T -> . F ]
+  [F -> . ( E ) ]
+  [F -> . id ]
+  Goto(I0, () = I1 (New)
+  Goto(I0, E) = I2 (New)
+  Goto(I0, F) = I3 (New)
+  Goto(I0, T) = I4 (New)
+  Goto(I0, id) = I5 (New)
+
+Processing State I1:
+  [E -> . E + T ]
+  [E -> . T ]
+  [T -> . T * F ]
+  [T -> . F ]
+  [F -> . ( E ) ]
+  [F -> ( . E ) ]
+  [F -> . id ]
+  Goto(I1, () = I1
+  Goto(I1, E) = I6 (New)
+  Goto(I1, F) = I3
+  Goto(I1, T) = I4
+  Goto(I1, id) = I5
+
+Processing State I2:
+  [S' -> E .]
+  [E -> E . + T ]
+  Goto(I2, +) = I7 (New)
+
+Processing State I3:
+  [T -> F .]
+
+Processing State I4:
+  [E -> T .]
+  [T -> T . * F ]
+  Goto(I4, *) = I8 (New)
+
+Processing State I5:
+  [F -> id .]
+
+Processing State I6:
+  [E -> E . + T ]
+  [F -> ( E . ) ]
+  Goto(I6, )) = I9 (New)
+  Goto(I6, +) = I7
+
+Processing State I7:
+  [E -> E + . T ]
+  [T -> . T * F ]
+  [T -> . F ]
+  [F -> . ( E ) ]
+  [F -> . id ]
+  Goto(I7, () = I1
+  Goto(I7, F) = I3
+  Goto(I7, T) = I10 (New)
+  Goto(I7, id) = I5
+
+Processing State I8:
+  [T -> T * . F ]
+  [F -> . ( E ) ]
+  [F -> . id ]
+  Goto(I8, () = I1
+  Goto(I8, F) = I11 (New)
+  Goto(I8, id) = I5
+
+Processing State I9:
+  [F -> ( E ) .]
+
+Processing State I10:
+  [E -> E + T .]
+  [T -> T . * F ]
+  Goto(I10, *) = I8
+
+Processing State I11:
+  [T -> T * F .]
+
+--- Building LR(0) Parsing Table ---
+Conflict at ACTION[4, *]: existing r2, new s8
+Conflict at ACTION[10, *]: existing r1, new s8
+
+--- LR(0) Parsing Table ---
+State | (     | )     | *     | +     | id    | $     |  | E     | F     | T     | 
+------+-------+-------+-------+-------+-------+-------+--+-------+-------+--------
+0     | s1    |       |       |       | s5    |       |  | 2     | 3     | 4     | 
+1     | s1    |       |       |       | s5    |       |  | 6     | 3     | 4     | 
+2     |       |       |       | s7    |       | acc   |  |       |       |       | 
+3     | r4    | r4    | r4    | r4    | r4    | r4    |  |       |       |       | 
+4     | r2    | r2    | conf  | r2    | r2    | r2    |  |       |       |       | 
+5     | r6    | r6    | r6    | r6    | r6    | r6    |  |       |       |       | 
+6     |       | s9    |       | s7    |       |       |  |       |       |       | 
+7     | s1    |       |       |       | s5    |       |  |       | 3     | 10    | 
+8     | s1    |       |       |       | s5    |       |  |       | 11    |       | 
+9     | r5    | r5    | r5    | r5    | r5    | r5    |  |       |       |       | 
+10    | r1    | r1    | conf  | r1    | r1    | r1    |  |       |       |       | 
+11    | r3    | r3    | r3    | r3    | r3    | r3    |  |       |       |       | 
+
+States (Item Sets):
+I0:
+  [S' -> . E ]
+  [E -> . E + T ]
+  [E -> . T ]
+  [T -> . T * F ]
+  [T -> . F ]
+  [F -> . ( E ) ]
+  [F -> . id ]
+I1:
+  [E -> . E + T ]
+  [E -> . T ]
+  [T -> . T * F ]
+  [T -> . F ]
+  [F -> . ( E ) ]
+  [F -> ( . E ) ]
+  [F -> . id ]
+I2:
+  [S' -> E .]
+  [E -> E . + T ]
+I3:
+  [T -> F .]
+I4:
+  [E -> T .]
+  [T -> T . * F ]
+I5:
+  [F -> id .]
+I6:
+  [E -> E . + T ]
+  [F -> ( E . ) ]
+I7:
+  [E -> E + . T ]
+  [T -> . T * F ]
+  [T -> . F ]
+  [F -> . ( E ) ]
+  [F -> . id ]
+I8:
+  [T -> T * . F ]
+  [F -> . ( E ) ]
+  [F -> . id ]
+I9:
+  [F -> ( E ) .]
+I10:
+  [E -> E + T .]
+  [T -> T . * F ]
+I11:
+  [T -> T * F .]
+(base) wangweiqin@wangweiqindeMac-mini ex4 自底向上的语法分析程序设计 % 
