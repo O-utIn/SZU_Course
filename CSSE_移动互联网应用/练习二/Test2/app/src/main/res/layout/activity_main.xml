@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <!-- 静态加载左侧碎片 -->
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/left_fragment"
+        android:name="com.example.test2.LeftFragment"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1" />
+
+    <!-- 静态加载右侧碎片，设置ID以便寻找 -->
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/right_fragment"
+        android:name="com.example.test2.RightFragment"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1" />
+
+</LinearLayout>
+

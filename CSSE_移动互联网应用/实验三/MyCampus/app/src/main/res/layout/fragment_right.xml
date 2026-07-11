@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- ================= 板块一：教师事务 ================= -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="教师事务"
+            android:textColor="#FFFFFF"
+            android:background="#8A0025"
+            android:padding="8dp"
+            android:textStyle="bold"
+            android:gravity="center"/>
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="2"
+            android:background="#FFFFFF"
+            android:padding="10dp"
+            android:layout_marginBottom="15dp">
+
+            <TextView android:text="· 办事大厅" android:layout_width="0dp" android:layout_columnWeight="1" android:padding="8dp"/>
+            <TextView android:text="· OA系统" android:layout_width="0dp" android:layout_columnWeight="1" android:padding="8dp"/>
+            <TextView android:text="· 教师邮箱" android:layout_width="0dp" android:layout_columnWeight="1" android:padding="8dp"/>
+            <TextView android:text="· 财务服务" android:layout_width="0dp" android:layout_columnWeight="1" android:padding="8dp"/>
+            <TextView android:text="· 科研技术" android:layout_width="0dp" android:layout_columnWeight="1" android:padding="8dp"/>
+            <TextView android:text="· 人力资源" android:layout_width="0dp" android:layout_columnWeight="1" android:padding="8dp"/>
+        </GridLayout>
+
+        <!-- ================= 板块二：学生事务 ================= -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="学生事务"
+            android:textColor="#FFFFFF"
+            android:background="#AF1E43"
+            android:padding="8dp"
+            android:textStyle="bold"
+            android:gravity="center"/>
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="2"
+            android:background="#FFFFFF"
+            android:padding="10dp"
+            android:layout_marginBottom="15dp">
+
+            <TextView android:text="· UOOC课程" android:layout_width="0dp" android:layout_columnWeight="1" android:padding="8dp"/>
+            <TextView android:text="· 学生邮箱" android:layout_width="0dp" android:layout_columnWeight="1" android:padding="8dp"/>
+            <TextView android:text="· 本科生选课" android:layout_width="0dp" android:layout_columnWeight="1" android:padding="8dp"/>
+            <TextView android:text="· 缴学杂费" android:layout_width="0dp" android:layout_columnWeight="1" android:padding="8dp"/>
+            <TextView android:text="· 心理咨询" android:layout_width="0dp" android:layout_columnWeight="1" android:padding="8dp"/>
+            <TextView android:text="· 就业指导" android:layout_width="0dp" android:layout_columnWeight="1" android:padding="8dp"/>
+        </GridLayout>
+
+        <!-- ================= 板块三：荔园生活 ================= -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="荔园生活"
+            android:textColor="#FFFFFF"
+            android:background="#CE3B62"
+            android:padding="8dp"
+            android:textStyle="bold"
+            android:gravity="center"/>
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="2"
+            android:background="#FFFFFF"
+            android:padding="10dp"
+            android:layout_marginBottom="15dp">
+
+            <TextView android:text="· 一网通办" android:layout_width="0dp" android:layout_columnWeight="1" android:padding="8dp"/>
+            <TextView android:text="· 创新创业" android:layout_width="0dp" android:layout_columnWeight="1" android:padding="8dp"/>
+            <TextView android:text="· 团学表彰" android:layout_width="0dp" android:layout_columnWeight="1" android:padding="8dp"/>
+            <TextView android:text="· 学生活动" android:layout_width="0dp" android:layout_columnWeight="1" android:padding="8dp"/>
+            <TextView android:text="· 体育场馆" android:layout_width="0dp" android:layout_columnWeight="1" android:padding="8dp"/>
+            <TextView android:text="· 勤工助学" android:layout_width="0dp" android:layout_columnWeight="1" android:padding="8dp"/>
+        </GridLayout>
+
+        <!-- ================= 板块四：网上服务 ================= -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="网上服务"
+            android:textColor="#FFFFFF"
+            android:background="#E26586"
+            android:padding="8dp"
+            android:textStyle="bold"
+            android:gravity="center"/>
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="2"
+            android:background="#FFFFFF"
+            android:padding="10dp"
+            android:layout_marginBottom="20dp">
+
+            <TextView android:text="· 图书馆" android:layout_width="0dp" android:layout_columnWeight="1" android:padding="8dp"/>
+            <TextView android:text="· 校园卡" android:layout_width="0dp" android:layout_columnWeight="1" android:padding="8dp"/>
+            <TextView android:text="· 会议室申请" android:layout_width="0dp" android:layout_columnWeight="1" android:padding="8dp"/>
+            <TextView android:text="· 故障报修" android:layout_width="0dp" android:layout_columnWeight="1" android:padding="8dp"/>
+            <TextView android:text="· 正版软件" android:layout_width="0dp" android:layout_columnWeight="1" android:padding="8dp"/>
+            <TextView android:text="· 中行网银" android:layout_width="0dp" android:layout_columnWeight="1" android:padding="8dp"/>
+        </GridLayout>
+
+
+        <!-- ================= 底部数据库测试区 ================= -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="▼ 下方是SQLite数据库读取测试区 ▼"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:textColor="#999999"/>
+
+        <!-- 之前用于展示 SQLite 数据的文本框保留在这里，满足老师要求 -->
+        <TextView
+            android:id="@+id/tv_service_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
+            android:background="#E0E0E0"
+            android:padding="10dp"
+            android:textSize="14sp"
+            android:textColor="#333333" />
+
+    </LinearLayout>
+</ScrollView>

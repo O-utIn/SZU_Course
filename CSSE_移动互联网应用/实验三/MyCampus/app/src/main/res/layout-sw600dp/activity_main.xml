@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- 左侧占用1份宽度 -->
+    <fragment
+        android:id="@+id/left_fragment"
+        android:name="com.example.my_campus.mycampus.LeftFragment"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1" />
+
+    <!-- 分割线 -->
+    <View android:layout_width="1dp" android:layout_height="match_parent" android:background="#CCCCCC"/>
+
+    <!-- 右侧占用2份宽度 (完全还原深大主页结构) -->
+    <fragment
+        android:id="@+id/right_fragment"
+        android:name="com.example.my_campus.mycampus.RightFragment"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="2" />
+</LinearLayout>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#F5F5F5">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="深大新闻与重要通知"
+        android:textSize="18sp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="文件缓存测试：已将最新通知写入内部存储"
+        android:textColor="#666666"/>
+
+    <!-- 模拟网络断开，触发强制下线广播的按钮 -->
+    <Button
+        android:id="@+id/btn_test_offline"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="模拟网络异常 (触发强制下线)"
+        android:backgroundTint="#8A0025"/>
+
+</LinearLayout>
