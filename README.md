@@ -5,6 +5,7 @@
 #### [CSSE_NLP：计算机与软件学院《自然语言处理》25-26学年内容](https://github.com/O-utIn/SZU_Course/tree/a5f8284d85702a7eb2a125a59e06caf91f2d345e/CSSE_NLP)
 #### [CSSE_SQL：计算机与软件学院《数据库系统》24-25学年内容](https://github.com/O-utIn/SZU_Course/tree/main/CSSE_SQL)
 #### [CSSE_UML：计算机与软件学院《面向对象系统设计与分析》24-25学年内容](https://github.com/O-utIn/SZU_Course/tree/main/CSSE_UML)
+#### [CSSE_中间件技术：计算机与软件学院《中间件技术》25-26学年内容](https://github.com/O-utIn/SZU_Course/tree/ef6cf6f4dbcf9a174baf56e9b96aeca3032d196b/CSSE_%E4%B8%AD%E9%97%B4%E4%BB%B6%E6%8A%80%E6%9C%AF)
 #### [CSSE_操作系统：计算机与软件学院《操作系统》24-25学年内容](https://github.com/O-utIn/SZU_Course/tree/aaa5a5e74a8a79225df52e910d6be366b5668edc/CSSE_%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F)
 #### [CSSE_数字电路：计算机与软件学院《数字电路》24-25学年内容](https://github.com/O-utIn/SZU_Course/tree/b0683323bea211a365b3285d641add179c3b4513/CSSE_%E6%95%B0%E5%AD%97%E7%94%B5%E8%B7%AF)
 #### [CSSE_算法设计与分析：计算机与软件学院《算法设计与分析》24-25学年内容](https://github.com/O-utIn/SZU_Course/tree/20b330d93554757e6e50af0fec01678a2ff9cb59/CSSE_%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90)
