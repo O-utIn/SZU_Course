@@ -14,6 +14,7 @@
 #### [CSSE_计算机系统2：计算机与软件学院《计算机系统2》24-25学年内容](https://github.com/O-utIn/SZU_Course/tree/a3601f06430740e0a6f6d6f8e0e6ad63b3f338a8/CSSE_%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F2)
 #### [CSSE_计算机系统3：计算机与软件学院《计算机系统3》25-26学年内容](https://github.com/O-utIn/SZU_Course/tree/49532a4b35e07e41744096cfe867d71cb578d8f9/CSSE_%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F3)
 #### [CSSE_计算机网络：计算机与软件学院《计算机网络》24-25学年内容](https://github.com/O-utIn/SZU_Course/tree/6b2dbd7c4da48c38461391ff311d0c2e9e60f9c6/CSSE_%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C)
+#### [CSSE_软件体系结构与设计模式：计算机与软件学院《软件体系结构与设计模式》25-26学年内容](https://github.com/O-utIn/SZU_Course/tree/b7773e4cf37033d71f71e3c711a76186d0112c19/CSSE_%E8%BD%AF%E4%BB%B6%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F)
 #### [CSSE_软件工程：计算机与软件学院《软件工程》25-26学年内容](https://github.com/O-utIn/SZU_Course/tree/d0ded6b11429d996691982af1c2b97f90941eb7f/CSSE_%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B)
 #### [EE_C程序设计：电信学院《C程序设计》23-24学年内容](https://github.com/O-utIn/SZU_Course/tree/main/EE_C%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1)
 #### [EE_数字电路：电信学院《数字电路》实验22-23学年内容](https://github.com/O-utIn/SZU_Course/tree/main/EE_%E6%95%B0%E5%AD%97%E7%94%B5%E8%B7%AF)
