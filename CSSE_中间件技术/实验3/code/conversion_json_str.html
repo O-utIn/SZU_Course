@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON 转换操作</title>
+    <script type="text/javascript">
+        // 将 JSON 字符串转换为对象并访问其属性
+        function jsStrToObj() {
+            var jsonStr = '{"name": "Luffy", "age": 17}';
+            var jsonObj = JSON.parse(jsonStr);  // 使用 JSON.parse() 将字符串转换为对象
+            alert('Name: ' + jsonObj.name);  // 弹出显示对象的 name 属性值
+        }
+
+        // 将 JSON 字符串转换为 JSON 数组并访问第二个元素的属性
+        function jsStrToArr() {
+            var jsonStr = '[{"stuNo": 20170031, "name": "何立立"}, {"stuNo": 20170032, "name": "赵多多"}]';
+            var jsonArr = JSON.parse(jsonStr);  // 使用 JSON.parse() 将字符串转换为数组
+            alert('Second student name: ' + jsonArr[1].name);  // 弹出显示数组第二个元素的 name 属性值
+        }
+
+        // 将 JSON 对象转换为 JSON 字符串
+        function jsObjToStr() {
+            var score = {
+                'stuNo': 20170031,
+                'name': '何立立',
+                'scores': [
+                    {'课程': '中间件技术', '成绩': 90},
+                    {'课程': '数据结构', '成绩': 86},
+                    {'课程': '计算机网络', '成绩': 80}
+                ]
+            };
+            var jsonStr = JSON.stringify(score);  // 使用 JSON.stringify() 将对象转换为字符串
+            alert('JSON string: ' + jsonStr);  // 弹出显示转换后的 JSON 字符串
+        }
+    </script>
+</head>
+<body>
+<h1>JSON 格式转换示例</h1>
+
+<h3>点击下列链接进行操作：</h3>
+
+<!-- 链接：JSON 字符串转换为对象 -->
+<p><a href="javascript:void(0);" onclick="jsStrToObj()">JSON字符串转换为对象</a></p>
+
+<!-- 链接：JSON 字符串转换为数组 -->
+<p><a href="javascript:void(0);" onclick="jsStrToArr()">JSON字符串转换为JSON数组</a></p>
+
+<!-- 链接：JSON 对象转换为字符串 -->
+<p><a href="javascript:void(0);" onclick="jsObjToStr()">JSON对象转换为JSON字符串</a></p>
+
+</body>
+</html>

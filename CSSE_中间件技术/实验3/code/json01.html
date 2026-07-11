@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>json01.html</title>
+        <meta http-equiv="content-type", content="text/html; charset=UTF-8">
+        <script type="text/javascript">
+            function f1() {
+                var obj = {'name': 'W', 'age': 20};
+                alert(obj.name + ' ' + obj.age);
+            }
+
+            function f2() {
+                var obj = {
+                    'name': 'W',
+                    'address': {
+                        'city': 'Shenzhen',
+                        'street':'yuehai',
+                        'room': '10'
+                    }
+                }
+                alert(obj.name + ' ' + obj.address.city + ' ' + obj.address.street + ' ' + obj.address.room);
+            }
+        </script>
+    </head>
+    <body>
+        <h1>创建JavaScript对象并查看熟悉</h1>
+        <a href="javascript:;" onclick="f1()">查看对象属性1</a>
+        <br>
+        <a href="javascript:;" onclick="f2()">查看对象属性2</a>
+    </body>
+</html>

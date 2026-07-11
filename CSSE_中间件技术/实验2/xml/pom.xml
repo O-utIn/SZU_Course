@@ -1,0 +1,33 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>org.example</groupId>
+  <artifactId>xml</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <name>Archetype - xml</name>
+  <url>http://maven.apache.org</url>
+
+  <!-- 设置 Java 编译版本和编码格式，防止因版本太旧导致代码标红 -->
+  <properties>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+
+  <!-- 这里是添加外部依赖（Jar包）的地方 -->
+  <dependencies>
+    <!-- 引入 JDOM 1.1 依赖 -->
+    <dependency>
+      <groupId>org.jdom</groupId>
+      <artifactId>jdom</artifactId>
+      <version>1.1</version>
+    </dependency>
+    <!-- 引入 Xerces 解析器依赖 -->
+    <dependency>
+      <groupId>xerces</groupId>
+      <artifactId>xercesImpl</artifactId>
+      <version>2.11.0</version>
+    </dependency>
+  </dependencies>
+
+</project>

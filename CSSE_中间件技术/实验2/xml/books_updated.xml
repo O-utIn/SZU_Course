@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<books>
+  <book id="1">
+    <name>Pride and Prejudice</name>
+    <price>60.0</price>
+  </book>
+  <book id="2">
+    <name>Lincon</name>
+    <price>30.5</price>
+  </book>
+  <book id="3">
+    <name>Aesop’s Fables</name>
+    <price>11.7</price>
+  </book>
+  <book id="4">
+    <name>The leader In You</name>
+    <price>16.0</price>
+  </book>
+  <book id="5">
+    <name>中间件技术</name>
+    <price>39.0</price>
+  </book>
+</books>
+

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student and Score Information</title>
+    <script type="text/javascript">
+        var students = [
+            {'stuNo': 2, 'name': ''},
+            {'stuNo': 20170032, 'name': '何立立'},
+            {'stuNo': 20170033, 'name': '赵多多'}
+        ];
+
+        var score = {
+            'stuNo': ,
+            'name': '',
+            'scores': [
+                {'课程': '中间件技术', '成绩': 90},
+                {'课程': '数据结构', '成绩': 86},
+                {'课程': '计算机网络', '成绩': 80}
+            ]
+        };
+
+        function showStudentInfo(index) {
+            var student = students[index];
+            alert('学号: ' + student.stuNo + ' 姓名: ' + student.name);
+        }
+
+        function showScoreInfo() {
+            var result = '学号: ' + score.stuNo + ' 姓名: ' + score.name + '\n';
+            score.scores.forEach(function(item) {
+                result += item.课程 + ': ' + item.成绩 + '\n';
+            });
+            alert(result);
+        }
+    </script>
+</head>
+<body>
+<h1>学生信息与成绩查询</h1>
+<h3>点击查看学生信息：</h3>
+<p><a href="javascript:;" onclick="showStudentInfo(0)">查看我的信息</a></p>
+<p><a href="javascript:;" onclick="showStudentInfo(1)">查看同学1信息</a></p>
+<p><a href="javascript:;" onclick="showStudentInfo(2)">查看同学2信息</a></p>
+
+<h3>点击查看成绩信息：</h3>
+<p><a href="javascript:;" onclick="showScoreInfo()">查看我的成绩</a></p>
+</body>
+</html>
