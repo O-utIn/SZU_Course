@@ -11,6 +11,7 @@
 #### [CSSE_移动互联网应用：计算机与软件学院《移动互联网应用》25-26学年内容](https://github.com/O-utIn/SZU_Course/tree/9ca53589aa0b1d81b65f496986d3dc9ced58999f/CSSE_%E7%A7%BB%E5%8A%A8%E4%BA%92%E8%81%94%E7%BD%91%E5%BA%94%E7%94%A8)
 #### [CSSE_算法设计与分析：计算机与软件学院《算法设计与分析》24-25学年内容](https://github.com/O-utIn/SZU_Course/tree/20b330d93554757e6e50af0fec01678a2ff9cb59/CSSE_%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90)
 #### [CSSE_编译原理：计算机与软件学院《编译原理》25-26学年内容](https://github.com/O-utIn/SZU_Course/tree/a4b07e9a5ef304d7efff37ff7e428490c150692b/CSSE_%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86)
+#### [CSSE_计算机伦理：计算机与软件学院《计算机伦理》25-26学年内容](https://github.com/O-utIn/SZU_Course/tree/4ecf94d0da80109cbc5f94fc33193156eb770c1d/CSSE_%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BC%A6%E7%90%86)
 #### [CSSE_计算机系统1：计算机与软件学院《计算机系统1》24-25学年内容](https://github.com/O-utIn/SZU_Course/tree/bf4e449d89cd78121a3e44a607f3dded9d6ff1a3/CSSE_%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F1)
 #### [CSSE_计算机系统2：计算机与软件学院《计算机系统2》24-25学年内容](https://github.com/O-utIn/SZU_Course/tree/a3601f06430740e0a6f6d6f8e0e6ad63b3f338a8/CSSE_%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F2)
 #### [CSSE_计算机系统3：计算机与软件学院《计算机系统3》25-26学年内容](https://github.com/O-utIn/SZU_Course/tree/49532a4b35e07e41744096cfe867d71cb578d8f9/CSSE_%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F3)
